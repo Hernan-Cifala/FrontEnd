@@ -1,0 +1,64 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; color: white;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+.panel-superior {
+    background-color: blue;
+}
+.texto-superior {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.btn-superior {
+    margin-top: 5px;
+    height: 80%;
+}
+
+.fondo {
+    background-color: black;
+}
+.banner {
+    background-color: blue;
+}
+
+.foto {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
+.nombre {
+    padding-top: 20px;
+}
+.texto {
+    font-family: Arial; 
+    font-size: 14pt;
+}
+.resumen {
+    padding-top: 60px;
+}
+
+.categoria {
+    background-color: black;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.certificado {
+    border-radius: 5%;
+}
+
+.lista {
+    padding-top: 10px;
+}
