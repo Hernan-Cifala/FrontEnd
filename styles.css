@@ -53,10 +53,20 @@ body {
     background-color: black;
     padding-top: 60px;
     padding-bottom: 60px;
+    text-align: center;
+}
+
+.alineado {
+    text-align: center;
 }
 
 .certificado {
     border-radius: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    height: 100%;
 }
 
 .lista {
