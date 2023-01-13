@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1685193899937499475" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Información de Contacto<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Contact Information<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/contacto/contacto.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8024932591315166082" datatype="html">
+        <source>Iniciar Sesión</source>
+        <target>Log In</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/encabezado/encabezado.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5733181785915191623" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Formación Profesional<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Professional Development<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8683032060294091433" datatype="html">
+        <source>Capacitación #SéProgramar completa. Cursando #YoProgramo. Conocimientos adquiridos:</source>
+        <target>Completed "#SéProgramar" course. Currently studying "#YoProgramo". Acquired knowledge:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7967736701175766509" datatype="html">
+        <source>Conceptos de programación.</source>
+        <target>Programming basics.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5645299094305624356" datatype="html">
+        <source>Desarrollo Web Front End.</source>
+        <target>Front End Web development.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3330326957330754107" datatype="html">
+        <source>HTML, CSS, JavaScript.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="845784718474025007" datatype="html">
+        <source>Bootstrap, Angular.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5499347104505862647" datatype="html">
+        <source>Git, Github.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3728803285940372130" datatype="html">
+        <source>Capacitación extensa sobre el desarrollo de videojuegos con Unity. Conocimientos adquiridos:</source>
+        <target>Extensive course about videogame development with Unity. Acquired knowledge:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5387672918140359193" datatype="html">
+        <source>Programación en C#.</source>
+        <target>Programming in C#.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6825843070737142361" datatype="html">
+        <source>Uso de scripts para definición de comportamientos.</source>
+        <target>Use of scripts to define behaviour.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9798949480278059" datatype="html">
+        <source>Conceptos avanzados de la programación orientada a objetos.</source>
+        <target>Comprehension of object-oriented programming.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8058310320817142472" datatype="html">
+        <source>Optimización del código.</source>
+        <target>Code optimization.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1975196684196585884" datatype="html">
+        <source>Capacitación extensa relacionada al análisis de datos complejo. Conocimientos adquiridos:</source>
+        <target>Extensive courses related to complex data analytics. Acquired knowledge:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="839055309543428861" datatype="html">
+        <source>Recolección, procesamiento, análisis y visualización de datos.</source>
+        <target>Collection, processing, analysis and visualization of data.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7070078026040027206" datatype="html">
+        <source>Uso avanzado de hojas de cálculo.</source>
+        <target>Advanced use of spreadsheets.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4536637567463222007" datatype="html">
+        <source>Manejo de bases de datos con SQL.</source>
+        <target>Database management with SQL.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4589005360255263972" datatype="html">
+        <source>Programación en R.</source>
+        <target>Programming in R.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5413066338166421460" datatype="html">
+        <source>Aprobado el First Certificate Exam in English. Certifica:</source>
+        <target>Passed the First Certificate Exam in English. Certifying:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2221282196087930280" datatype="html">
+        <source>Nivel avanzado de inglés.</source>
+        <target>Proficient level in English.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="307805445997351137" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Habilidades y Competencias<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Skills and Competencies<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/habilidades/habilidades.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2474807590036157488" datatype="html">
+        <source>Programador</source>
+        <target>Programmer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/presentacion/presentacion.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3673517160424851159" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Resumen Profesional:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Professional Summary:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/presentacion/presentacion.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8676165821841802694" datatype="html">
+        <source>Pensador analítico con mentalidad técnica y atención al detalle busca insertarse al mercado laboral con el objetivo de expandir sus conocimientos de programación y ser parte de un equipo de desarrollo.</source>
+        <target>Analytical thinker with a technical mindset and attention to detail seeks to expand into the job market with the objective of employing his programming knowledge and joining a development team.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/presentacion/presentacion.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4400967648748130388" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Proyectos Recientes<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <target><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Recent Projects<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9201103587777813545" datatype="html">
+        <source>Portfolio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5560618830724718991" datatype="html">
+        <source>El desarrollo de este portfolio.</source>
+        <target>The development of this portfolio.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5004965778349318365" datatype="html">
+        <source>Uso de HTML, CSS y JavaScript.</source>
+        <target>Use of HTML, CSS and JavaScript.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3069637723268333723" datatype="html">
+        <source>Implementación con Bootstrap y Angular.</source>
+        <target>Implementation with Bootstrap and Angular.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5874673808302942448" datatype="html">
+        <source>Creación de repositorios local y remoto.</source>
+        <target>Creation of local and remote repositories.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5985830603790510501" datatype="html">
+        <source>Desarrollo Front End dinámico.</source>
+        <target>Dynamic Front End development.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4210621792688609503" datatype="html">
+        <source>Proyecto &quot;Oeste Salvaje&quot;</source>
+        <target>&quot;Wild West&quot; Project</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8737545865674857015" datatype="html">
+        <source>Videojuego desarrollado con Unity.</source>
+        <target>Videogame developed with Unity.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4676123261318201547" datatype="html">
+        <source>Programación con C#.</source>
+        <target>Programming in C#.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9090941107060084464" datatype="html">
+        <source>Diseño de niveles y escenarios.</source>
+        <target>Level and scene design.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8019315980137615741" datatype="html">
+        <source>Animaciones e IA avanzada.</source>
+        <target>Advanced animations and AI.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4632537302722556704" datatype="html">
+        <source>Sistema de físicas y proyectiles.</source>
+        <target>Physics and projectile system.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1012174483143016785" datatype="html">
+        <source>Sistema de configuración simple.</source>
+        <target>Simple settings menu.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6602267225026006633" datatype="html">
+        <source>Análisis sobre campañas de marketing de una empresa.</source>
+        <target>Analysis over a company's marketing campaigns.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2304515096255471175" datatype="html">
+        <source>Procesamiento de datos en Excel y SQLite.</source>
+        <target>Data processing in Excel and SQLite.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8878162691026221914" datatype="html">
+        <source>Análisis y visualización de datos con R.</source>
+        <target>Data analysis and visualization in R.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4872391387512057926" datatype="html">
+        <source>Presentación de resultados en PowerPoint.</source>
+        <target>Presentation of results in PowerPoint.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

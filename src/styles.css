@@ -1,4 +1,4 @@
-body {
+.cuerpo {
     font-family: Verdana, Geneva, Tahoma, sans-serif; color: white;
 }
 
@@ -32,8 +32,8 @@ body {
 
 .foto {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     border-radius: 50%;
     padding-top: 10px;
 }
@@ -67,6 +67,12 @@ body {
     margin-right: auto;
     width: 75%;
     height: 100%;
+}
+
+.skills {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .lista {
