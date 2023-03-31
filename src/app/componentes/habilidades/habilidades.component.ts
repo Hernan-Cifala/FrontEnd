@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HabilidadService } from 'src/app/servicios/habilidad.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent {
+
+  habilidad:any;
+
+  constructor(private servicio:HabilidadService) { }
+
+  ngOnInit(): void {
+    this.servicio.getHabilidades().subscribe(data => {
+      this.habilidad = data;
+    })
+  }
 
 }

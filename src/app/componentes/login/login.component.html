@@ -1,0 +1,32 @@
+<div id="login">
+
+    <div class="modal fade" style="color: black;" id="iniciarSesion" tabindex="-1" aria-hidden="true" aria-labelledby="titulo">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="titulo" i18n="@@E2"><b>Iniciar Sesión</b></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-column text-center">
+                        <form [formGroup]="form">
+                          <div class="form-group">
+                            <input type="email" formControlName="email" class="form-control" id="email1" i18n-placeholder="@@E3" placeholder="Correo electrónico"
+                            [ngClass]="{'is-invalid' : Email?.errors && Email?.touched, 'is-valid' : !Email?.errors && Email?.touched}">
+                          </div>
+                          <div class="form-group">
+                            <input type="password" formControlName="password" class="form-control" id="password1" i18n-placeholder="@@E4" placeholder="Contraseña"
+                            [ngClass]="{'is-invalid' : Password?.errors && Password?.touched, 'is-valid' : !Password?.errors && Password?.touched}">
+                          </div>
+                          <button type="button" class="btn btn-info btn-block" i18n="@@E5">Iniciar Sesión</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-center">
+                    <div class="acceso" i18n="@@E6">Ingreso reservado para administradores</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
