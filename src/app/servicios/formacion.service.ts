@@ -12,16 +12,24 @@ export class FormacionService {
 
   constructor(private http:HttpClient) { }
 
-  public getFormaciones():Observable<any> {
-    return this.http.get(this.url + 'traer');
+  public get():Observable<any> {
+    return this.http.get<any[]>(this.url + 'traer');
   }
 
-  public getFormacion(formacion:Formacion):Observable<any> {
-    return this.http.get(this.url + 'traer/' + formacion.id);
+  public post(formacion:Formacion):Observable<any> {
+    return this.http.post(this.url + 'crear', formacion);
   }
 
-  public putFormacion(formacion:Formacion):Observable<any> {
-    return this.http.put(this.url + 'editar/' + formacion.id, formacion);
+  public getById(id:number):Observable<any> {
+    return this.http.get<any>(this.url + 'traer/' + id);
+  }
+
+  public put(id:number, formacion:Formacion):Observable<any> {
+    return this.http.put(this.url + 'editar/' + id, formacion);
+  }
+
+  public delete(id:number):Observable<any> {
+    return this.http.delete(this.url + 'borrar/' + id);
   }
 
 }

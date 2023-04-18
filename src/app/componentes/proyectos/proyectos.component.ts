@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Proyecto } from 'src/app/modelos/proyecto';
+import { HerramientasService } from 'src/app/servicios/herramientas.service';
 import { ProyectoService } from 'src/app/servicios/proyecto.service';
 import { TareasService } from 'src/app/servicios/tareas.service';
 
@@ -9,18 +11,27 @@ import { TareasService } from 'src/app/servicios/tareas.service';
 })
 export class ProyectosComponent {
 
-  proyecto:any;
+  proyectos:any;
   tareas:any;
+  herramientas:any;
+  modal:Proyecto = {"id": -1, "titulo": "", "subtitulo": "", "descripcion": ""};
 
-  constructor(private servicioP:ProyectoService, private servicioT:TareasService) { }
+  constructor(private servicioP:ProyectoService, private servicioT:TareasService, private servicioH:HerramientasService) { }
 
   ngOnInit(): void {
-    this.servicioP.getProyectos().subscribe(data => {
-      this.proyecto = data;
+    this.servicioP.get().subscribe(data => {
+      this.proyectos = data;
     })
-    this.servicioT.getTareas().subscribe(data => {
+    this.servicioT.get().subscribe(data => {
       this.tareas = data;
     })
+    this.servicioH.get().subscribe(data => {
+      this.herramientas = data;
+    })
+  }
+
+  setActual(proyecto:Proyecto) {
+    this.modal = proyecto;
   }
 
 }

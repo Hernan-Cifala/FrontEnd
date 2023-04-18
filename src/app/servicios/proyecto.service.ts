@@ -12,16 +12,24 @@ export class ProyectoService {
 
   constructor(private http:HttpClient) { }
 
-  public getProyectos():Observable<any> {
-    return this.http.get(this.url + 'traer');
+  public get():Observable<any> {
+    return this.http.get<any[]>(this.url + 'traer');
   }
 
-  public getProyecto(proyecto:Proyecto):Observable<any> {
-    return this.http.get(this.url + 'traer/' + proyecto.id);
+  public post(proyecto:Proyecto):Observable<any> {
+    return this.http.post(this.url + 'crear', proyecto);
   }
 
-  public putProyecto(proyecto:Proyecto):Observable<any> {
-    return this.http.put(this.url + 'editar/' + proyecto.id, proyecto);
+  public getById(id:number):Observable<any> {
+    return this.http.get<any>(this.url + 'traer/' + id);
+  }
+
+  public put(id:number, proyecto:Proyecto):Observable<any> {
+    return this.http.put(this.url + 'editar/' + id, proyecto);
+  }
+
+  public delete(id:number):Observable<any> {
+    return this.http.delete(this.url + 'borrar/' + id);
   }
 
 }

@@ -5,9 +5,19 @@
         <h2 class="categoria" i18n="@@C1"><b>Información de Contacto</b></h2>
     </div>
 
-    <div class="row fondo">
-        <p style="font-size: 16pt;padding-bottom: 20px;" class="alineado">hernan.cifala@gmail.com</p>
-        <a style="font-size: 16pt;padding-bottom: 20px;" class="alineado" href="https://www.linkedin.com/in/hernan-cifala/">Linkedin</a>
-        <a style="font-size: 16pt;padding-bottom: 20px;" class="alineado" href="https://github.com/Hernan-Cifala">Github</a>  
+    <div class="row fondo alineado">
+        <div class="col-sm-12" *ngFor = "let contacto of contactos">
+            <p><a *ngIf = "contacto.link != null" style="font-size: 16pt;margin-bottom: 20px;" href={{contacto.link}}>{{contacto.info}}</a></p>
+            <p *ngIf = "contacto.link == null" style="font-size: 16pt;margin-bottom: 20px;">{{contacto.info}}</p>
+        </div>
     </div>
+
+    <!--
+    <div class="row fondo">
+        <p style="font-size: 16pt;padding-bottom: 20px;" class="alineado">{{contactos[0].info}}</p>
+        <a style="font-size: 16pt;padding-bottom: 20px;" class="alineado" href="https://www.linkedin.com/in/hernan-cifala/">{{contactos[1].info}}</a>
+        <a style="font-size: 16pt;padding-bottom: 20px;" class="alineado" href="https://github.com/Hernan-Cifala">{{contactos[2].info}}</a>  
+    </div>
+    -->
+
 </div>

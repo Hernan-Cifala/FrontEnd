@@ -1,0 +1,194 @@
+<div id="admin">
+
+    <div class="row panel-superior">
+        <div class="col-sm-10">
+            <h3 class="texto-superior">Admin</h3>
+        </div>
+        <div class="col-sm-2">
+            <button type="button" (click)="onLogout()" class="btn btn-primary btn-superior" i18n="@@A1">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <div class="row fondo alineado">
+        <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
+        <h2 class="categoria" i18n="@@X1"><b>Información Personal</b></h2>
+        <button class="btn btn-dark" (click)="setActual(personas[0], servicioPerso, Persona)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+
+        <div class="col-sm-12" *ngFor = "let persona of personas">
+            <p><b>{{persona.nombre}} {{persona.apellido}}</b></p>
+            <p>{{persona.titulo}}</p>
+            <p>{{persona.resumen}}</p>
+            <p>{{persona.foto}}</p>
+        </div>
+    </div>
+
+    <div class="row fondo alineado">
+        <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
+        <h2 class="categoria" i18n="@@X1"><b>Experiencia Laboral</b></h2>
+        <button class="btn btn-dark" (click)="setActual(experiencias[0], servicioExpe, Experiencia)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+
+        <div class="col-sm-12" *ngFor = "let experiencia of experiencias">
+            <button class="btn btn-dark" (click)="setActual(experiencia, servicioExpe, Experiencia)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(experiencia, servicioExpe, Experiencia)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <p><b>{{experiencia.nombre}} ( {{experiencia.inicio}} - {{experiencia.fin}} )</b></p>
+            <p>{{experiencia.actual}}</p>
+            <p>{{experiencia.descripcion}}</p>
+            <p>{{experiencia.tipo}}</p>
+            <p>{{experiencia.logo}}</p>
+        </div>
+    </div>
+
+    <div class="row fondo alineado">
+        <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
+        <h2 class="categoria" i18n="@@X1"><b>Formación Profesional</b></h2>
+        <button class="btn btn-dark" (click)="setActual(formaciones[0], servicioForma, Formacion)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+
+        <div class="col-sm-12" *ngFor = "let formacion of formaciones">
+            <button class="btn btn-dark" (click)="setActual(formacion, servicioForma, Formacion)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(formacion, servicioForma, Formacion)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <p><b>{{formacion.nombre}}</b></p>
+            <p>{{formacion.descripcion}}</p>
+            <p>{{formacion.certificacion}}</p>
+            <button class="btn btn-sm btn-dark" (click)="setActual(conocimientos[0], servicioCono, Conocimiento)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 20px;"></i></button>
+            <ul>
+                <div *ngFor = "let conocimiento of conocimientos">
+                    <li *ngIf = "conocimiento.formacion_id == formacion.id">{{conocimiento.conocimiento}}
+                        <button class="btn btn-sm btn-dark" (click)="setActual(conocimiento, servicioCono, Conocimiento)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(conocimiento, servicioCono, Conocimiento)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row fondo alineado">
+        <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
+        <h2 class="categoria" i18n="@@X1"><b>Habilidades y Competencias</b></h2>
+        <button class="btn btn-dark" (click)="setActual(habilidades[0], servicioHabi, Habilidad)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+
+        <div class="col-sm-12" *ngFor = "let habilidad of habilidades">
+            <p><b>{{habilidad.ruta}}</b></p>
+        </div>
+    </div>
+
+    <div class="row fondo alineado">
+        <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
+        <h2 class="categoria" i18n="@@X1"><b>Proyectos Recientes</b></h2>
+        <button class="btn btn-dark" (click)="setActual(proyectos[0], servicioProye, Proyecto)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+
+        <div class="col-sm-12" *ngFor = "let proyecto of proyectos">
+            <button class="btn btn-dark" (click)="setActual(proyecto, servicioProye, Proyecto)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(proyecto, servicioProye, Proyecto)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <p><b>{{proyecto.titulo}}</b></p>
+            <p>{{proyecto.subtitulo}}</p>
+            <p>{{proyecto.descripcion}}</p>
+            <button class="btn btn-sm btn-dark" (click)="setActual(tareas[0], servicioTare, Tarea)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 20px;"></i></button>
+            <ul>
+                <div *ngFor = "let tarea of tareas">
+                    <li *ngIf = "tarea.proyecto_id == proyecto.id">{{tarea.tarea}}
+                        <button class="btn btn-sm btn-dark" (click)="setActual(tarea, servicioTare, Tarea)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(tarea, servicioTare, Tarea)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
+                    </li>
+                </div>
+            </ul>
+            <button class="btn btn-sm btn-dark" (click)="setActual(herramientas[0], servicioHerra, Herramienta)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 20px;"></i></button>
+            <ul>
+                <div *ngFor = "let herramienta of herramientas">
+                    <li *ngIf = "herramienta.proyecto_id == proyecto.id">{{herramienta.herramienta}}
+                        <button class="btn btn-sm btn-dark" (click)="setActual(herramienta, servicioHerra, Herramienta)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(herramienta, servicioHerra, Herramienta)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row fondo alineado">
+        <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
+        <h2 class="categoria" i18n="@@X1"><b>Información de Contacto</b></h2>
+        <button class="btn btn-dark" (click)="setActual(contactos[0], servicioConta, Contacto)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+
+        <div class="col-sm-12" *ngFor = "let contacto of contactos">
+            <button class="btn btn-dark" (click)="setActual(contacto, servicioConta, Contacto)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(contacto, servicioConta, Contacto)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <p><b>{{contacto.info}}</b></p>
+            <p>{{contacto.link}}</p>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="eliminar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>¿Está seguro de que desea eliminar  ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" (click)="eliminar()" data-bs-dismiss="modal">Sí</button>
+                    <button type="btn-close" data-bs-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="crear" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h3>Crear Elemento</h3>
+                    <form (ngSubmit) = "crear()">
+                        <div class="form-group" *ngFor = "let item of clase | keyvalue;">
+                            <div *ngIf = "item.key != id">
+                                <label style="text-transform: capitalize;"><b>{{item.key}}</b></label>
+                                <input type="text" class ="form-control" id = {{item.key}}
+                                    [(ngModel)] = "clase.item" name = {{item.key}}>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="editar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h3>Editar Elemento</h3>
+                    <form (ngSubmit) = "editar()">
+                        <div class="form-group" *ngFor = "let item of clase | keyvalue">
+                            <div *ngIf = "item.key != id">
+                                <label style="text-transform: capitalize;"><b>{{item.key}}</b></label>
+                                <input type="text" class ="form-control" id = {{item.key}}
+                                    [(ngModel)] = "clase.item" name = {{item.key}}>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit">Editar</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+    <div class="row fondo">
+        <div>
+            <button class="btn btn-dark" style="color: white;"><i class="fa-solid fa-pen-to-square" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" style="color: white;"><i class="fa-regular fa-x" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" style="color: white;"><i class="fa-regular fa-plus" style="font-size: 24px;"></i></button>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-sm btn-dark" style="color: white;"><i class="fa-solid fa-pen-to-square" style="font-size: 20px;"></i></button>
+            <button class="btn btn-sm btn-dark" style="color: white;"><i class="fa-regular fa-x" style="font-size: 20px;"></i></button>
+            <button class="btn btn-sm btn-dark" style="color: white;"><i class="fa-regular fa-plus" style="font-size: 20px;"></i></button>
+        </div>    
+    </div>
+    -->
+
+</div>

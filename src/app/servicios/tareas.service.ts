@@ -12,16 +12,24 @@ export class TareasService {
 
   constructor(private http:HttpClient) { }
 
-  public getTareas():Observable<any> {
-    return this.http.get(this.url + 'traer');
+  public get():Observable<any> {
+    return this.http.get<any[]>(this.url + 'traer');
   }
 
-  public getTarea(tareas:Tareas):Observable<any> {
-    return this.http.get(this.url + 'traer/' + tareas.id);
+  public post(tareas:Tareas):Observable<any> {
+    return this.http.post(this.url + 'crear', tareas);
   }
 
-  public putTareas(tareas:Tareas):Observable<any> {
-    return this.http.put(this.url + 'editar/' + tareas.id, tareas);
+  public getById(id:number):Observable<any> {
+    return this.http.get<any>(this.url + 'traer/' + id);
+  }
+
+  public put(id:number, tareas:Tareas):Observable<any> {
+    return this.http.put(this.url + 'editar/' + id, tareas);
+  }
+
+  public delete(id:number):Observable<any> {
+    return this.http.delete(this.url + 'borrar/' + id);
   }
 
 }

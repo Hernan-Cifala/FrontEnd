@@ -2,6 +2,20 @@
         
     <div class="row fondo">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@L1"><b>Experiencia Laboral</b></h2>
+        <h2 class="categoria" i18n="@@X1"><b>Experiencia Laboral</b></h2>
     </div>
+
+    <div class="row fondo" *ngFor = "let experiencia of experiencias">
+        <div class="col-sm-4">
+            <img src={{experiencia.logo}} class="certificado" width="75%" height="75%" alt={{experiencia.nombre}}>
+        </div>
+        <div class="col-sm-8">
+            <p class="texto" style="padding-bottom: 20px;" i18n="@@F2"><b>{{experiencia.nombre}} ( {{experiencia.inicio}} - {{experiencia.fin}} )</b></p>
+            <p class="texto">Trabajo actual: {{experiencia.actual}}</p>
+            <p class="texto">Tipo de empleo: {{experiencia.tipo}}</p>
+            <p class="texto">{{experiencia.descripcion}}</p>
+        </div>
+        <hr style="width:50%;height:2px;border-color:white;margin-top:50px;margin-bottom:50px;margin-left:auto;margin-right:auto;">       
+    </div>
+
 </div>

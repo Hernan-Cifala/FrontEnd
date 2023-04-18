@@ -12,16 +12,24 @@ export class PersonaService {
 
   constructor(private http:HttpClient) { }
 
-  public getPersonas():Observable<any> {
-    return this.http.get(this.url + 'traer');
+  public get():Observable<any> {
+    return this.http.get<any[]>(this.url + 'traer');
   }
 
-  public getPersona(persona:Persona):Observable<any> {
-    return this.http.get(this.url + 'traer/' + persona.id);
+  public post(persona:Persona):Observable<any> {
+    return this.http.post(this.url + 'crear', persona);
   }
 
-  public putPersona(persona:Persona):Observable<any> {
-    return this.http.put(this.url + 'editar/' + persona.id, persona);
+  public getById(id:number):Observable<any> {
+    return this.http.get<any>(this.url + 'traer/' + id);
+  }
+
+  public put(id:number, persona:Persona):Observable<any> {
+    return this.http.put(this.url + 'editar/' + id, persona);
+  }
+
+  public delete(id:number):Observable<any> {
+    return this.http.delete(this.url + 'borrar/' + id);
   }
 
 }

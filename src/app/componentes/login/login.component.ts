@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder) {
+  constructor(private formBuilder:FormBuilder, private login:LoginService, private router:Router) {
     this.form=this.formBuilder.group(
       {
         email:['',[Validators.required,Validators.email]],
@@ -19,7 +21,20 @@ export class LoginComponent implements OnInit {
    }
    
   ngOnInit(): void {
-    
+  }
+
+  onLogin() {
+    console.log(this.form);
+    this.login.login(this.form.value)
+      .then(response => {
+      console.log(response);
+      console.log("Inicio de sesion exitoso");
+      this.router.navigate(['/admin']);
+    })
+      .catch(error => { 
+        console.log(error);
+        console.log("Inicio de sesion fallido");
+    })
   }
   
   get Email() {

@@ -8,13 +8,13 @@ import { ContactoService } from 'src/app/servicios/contacto.service';
 })
 export class ContactoComponent {
 
-  contacto:any;
+  contactos:any;
 
   constructor(private servicio:ContactoService) { }
 
   ngOnInit(): void {
-    this.servicio.getContactos().subscribe(data => {
-      this.contacto = data;
+    this.servicio.get().subscribe(data => {
+      this.contactos = data;
     })
   }
 

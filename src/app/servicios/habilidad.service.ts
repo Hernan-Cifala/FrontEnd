@@ -12,16 +12,24 @@ export class HabilidadService {
 
   constructor(private http:HttpClient) { }
 
-  public getHabilidades():Observable<any> {
-    return this.http.get(this.url + 'traer');
+  public get():Observable<any> {
+    return this.http.get<any[]>(this.url + 'traer');
   }
 
-  public getHabilidad(habilidad:Habilidad):Observable<any> {
-    return this.http.get(this.url + 'traer/' + habilidad.id);
+  public post(habilidad:Habilidad):Observable<any> {
+    return this.http.post(this.url + 'crear', habilidad);
   }
 
-  public putHabilidad(habilidad:Habilidad):Observable<any> {
-    return this.http.put(this.url + 'editar/' + habilidad.id, habilidad);
+  public getById(id:number):Observable<any> {
+    return this.http.get<any>(this.url + 'traer/' + id);
+  }
+
+  public put(id:number, habilidad:Habilidad):Observable<any> {
+    return this.http.put(this.url + 'editar/' + id, habilidad);
+  }
+
+  public delete(id:number):Observable<any> {
+    return this.http.delete(this.url + 'borrar/' + id);
   }
 
 }

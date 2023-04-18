@@ -13,7 +13,7 @@ export class HabilidadesComponent {
   constructor(private servicio:HabilidadService) { }
 
   ngOnInit(): void {
-    this.servicio.getHabilidades().subscribe(data => {
+    this.servicio.get().subscribe(data => {
       this.habilidad = data;
     })
   }

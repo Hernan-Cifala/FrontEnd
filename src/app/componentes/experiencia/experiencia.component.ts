@@ -8,13 +8,13 @@ import { ExperienciaService } from 'src/app/servicios/experiencia.service';
 })
 export class ExperienciaComponent {
 
-  experiencia:any;
+  experiencias:any;
 
   constructor(private servicio:ExperienciaService) { }
 
   ngOnInit(): void {
-    this.servicio.getExperiencias().subscribe(data => {
-      this.experiencia = data;
+    this.servicio.get().subscribe(data => {
+      this.experiencias = data;
     })
   }
 

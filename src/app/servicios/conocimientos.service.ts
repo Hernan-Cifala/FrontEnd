@@ -12,16 +12,24 @@ export class ConocimientosService {
 
   constructor(private http:HttpClient) { }
 
-  public getConocimientos():Observable<any> {
-    return this.http.get(this.url + 'traer');
+  public get():Observable<any> {
+    return this.http.get<any[]>(this.url + 'traer');
   }
 
-  public getConocimiento(conocimientos:Conocimientos):Observable<any> {
-    return this.http.get(this.url + 'traer/' + conocimientos.id);
+  public post(conocimientos:Conocimientos):Observable<any> {
+    return this.http.post(this.url + 'crear', conocimientos);
   }
 
-  public putConocimientos(conocimientos:Conocimientos):Observable<any> {
-    return this.http.put(this.url + 'editar/' + conocimientos.id, conocimientos);
+  public getById(id:number):Observable<any> {
+    return this.http.get<any>(this.url + 'traer/' + id);
+  }
+
+  public put(id:number, conocimientos:Conocimientos):Observable<any> {
+    return this.http.put(this.url + 'editar/' + id, conocimientos);
+  }
+
+  public delete(id:number):Observable<any> {
+    return this.http.delete(this.url + 'borrar/' + id);
   }
 
 }
