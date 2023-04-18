@@ -6,6 +6,58 @@
     </div>
 
     <div class="row fondo">
+        <div class="col-sm-4" *ngFor = "let proyecto of proyectos">
+            <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@P2A">{{proyecto.titulo}}</h4>
+            <p class="texto alineado" style="padding-bottom: 20px;" i18n="@@P2B">{{proyecto.subtitulo}}</p>
+            <ul>
+                <div *ngFor = "let tarea of tareas">
+                    <li class="lista" *ngIf = "tarea.proyecto_id == proyecto.id">{{tarea.tarea}}</li>
+                </div>
+            </ul>
+
+            <div class="text-center"><button type="button" (click)="setActual(proyecto)" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#proyecto" i18n="@@P2-B">Ver más...</button></div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="proyecto" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header fondo">
+                    <h4 class="modal-title" id="titulo" i18n="@@P2-5"><b>{{modal.titulo}}</b></h4>
+                    <button type="button" class="btn-close" style="background-color: lightblue;" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body fondo">
+                    <h5 i18n="@@P2-6">{{modal.subtitulo}}</h5>
+                    <br>
+                    <p i18n="@@P2-7">{{modal.descripcion}}</p>
+                    <br>
+                    <p><b i18n="@@P2-8">Herramientas utilizadas:</b></p>
+                    <br>
+                    <ul>
+                        <div *ngFor = "let herramienta of herramientas">
+                            <li *ngIf = "herramienta.proyecto_id == modal.id">{{herramienta.herramienta}}</li>
+                        </div>
+                    </ul>
+                    <br>
+                    <p><b i18n="@@P2-12">Tareas realizadas:</b></p>
+                    <br>
+                    <ul>
+                        <div *ngFor = "let tarea of tareas">
+                            <li *ngIf = "tarea.proyecto_id == modal.id">{{tarea.tarea}}</li>
+                        </div>
+                    </ul>
+                    <br>
+                    <img *ngIf = "modal.id == 1" src="">
+                    <video *ngIf = "modal.id == 2" src=""></video>
+                    <iframe *ngIf = "modal.id == 3" src="https://docs.google.com/presentation/d/e/2PACX-1vQi6UNHhQQOpr8hEIs0VIBx-JvT4fJ1dt4d8nBA8lBNjbRpzId4eUqAbQQ3cLXSaw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="720" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="row fondo">
         <div class="col-sm-4">
             <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@P2A">Portfolio</h4>
             <p class="texto alineado" i18n="@@P2B">El desarrollo de este portfolio.</p>
@@ -15,7 +67,6 @@
                 <li i18n="@@P2-3">Creación de repositorios local y remoto.</li>
                 <li i18n="@@P2-4">Desarrollo Front End dinámico.</li>
             </ul>
-
             <div class="text-center"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#portfolio" i18n="@@P2-B">Ver más...</button></div>
             
             <div class="modal fade" id="portfolio" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
@@ -54,7 +105,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="col-sm-4">
             <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@P3A">Proyecto "Oeste Salvaje"</h4>
@@ -156,4 +206,6 @@
 
         </div>    
     </div>
+    -->
+    
 </div>

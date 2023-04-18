@@ -12,16 +12,24 @@ export class ContactoService {
 
   constructor(private http:HttpClient) { }
 
-  public getContactos():Observable<any> {
-    return this.http.get(this.url + 'traer');
+  public get():Observable<any> {
+    return this.http.get<any[]>(this.url + 'traer');
   }
 
-  public getContacto(contacto:Contacto):Observable<any> {
-    return this.http.get(this.url + 'traer/' + contacto.id);
+  public post(contacto:Contacto):Observable<any> {
+    return this.http.post(this.url + 'crear', contacto);
   }
 
-  public putContacto(contacto:Contacto):Observable<any> {
-    return this.http.put(this.url + 'editar/' + contacto.id, contacto);
+  public getById(id:number):Observable<any> {
+    return this.http.get<any>(this.url + 'traer/' + id);
+  }
+
+  public put(id:number, contacto:Contacto):Observable<any> {
+    return this.http.put(this.url + 'editar/' + id, contacto);
+  }
+
+  public delete(id:number):Observable<any> {
+    return this.http.delete(this.url + 'borrar/' + id);
   }
 
 }

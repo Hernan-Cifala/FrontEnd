@@ -5,15 +5,15 @@
     </div>
     <div class="row fondo">
         <div class="col-sm-2">
-            <img src="assets\public_html\Foto-CV.jpg" class="foto">
+            <img src={{persona[0].foto}} class="foto">
         </div>
         <div class="col-sm-3">
-            <h3 class="nombre"><b>Hernán Cifalá</b></h3>
-            <h5 class="texto" i18n="@@A1">Programador</h5>
+            <h3 class="nombre"><b>{{persona[0].nombre}} {{persona[0].apellido}}</b></h3>
+            <h5 class="texto" i18n="@@A1">{{persona[0].titulo}}</h5>
         </div>
         <div class="col-sm-6">
             <h5 class="resumen" i18n><b>Resumen Profesional:</b></h5>
-            <p class="texto" i18n="@@A2">Pensador analítico con mentalidad técnica y atención al detalle busca insertarse al mercado laboral con el objetivo de expandir sus conocimientos de programación y ser parte de un equipo de desarrollo.</p>
-        </div>                
+            <p class="texto" i18n="@@A2">{{persona[0].resumen}}</p>
+        </div>        
     </div>
 </div>

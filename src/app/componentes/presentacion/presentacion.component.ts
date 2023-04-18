@@ -13,7 +13,7 @@ export class PresentacionComponent {
   constructor(private servicio:PersonaService) { }
 
   ngOnInit(): void {
-    this.servicio.getPersonas().subscribe(data => {
+    this.servicio.get().subscribe(data => {
       this.persona = data;
     })
   }
