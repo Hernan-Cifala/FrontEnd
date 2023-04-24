@@ -10,7 +10,7 @@
             <img src={{formacion.certificacion}} (click)="setActual(formacion)" class="certificado" width="75%" height="75%" type="button" data-bs-toggle="modal" data-bs-target="#certificado" alt={{formacion.nombre}}>
         </div>
         <div class="col-sm-6">
-            <p class="texto" style="padding-bottom: 20px;" i18n="@@F2"><b>{{formacion.nombre}}:</b> {{formacion.descripcion}}</p>     
+            <p class="texto" style="padding-bottom: 20px;"><b>{{formacion.nombre}}:</b> {{formacion.descripcion}}</p>     
             <ul>
                 <div *ngFor = "let conocimiento of conocimientos">
                     <li class="lista" *ngIf = "conocimiento.formacion_id == formacion.id">{{conocimiento.conocimiento}}</li>
@@ -25,88 +25,5 @@
                 <img src={{modal.certificacion}} width="100%" height="100%" class="center">
         </div>
     </div>
-    
-    <!--
-    <div class="row fondo">
-        <div class="col-sm-6">
-            <img src={{formaciones[0].certificacion}} class="certificado" width="75%" height="75%" type="button" data-bs-toggle="modal" data-bs-target="#inti" alt="Certificado - Argentina Programa">
-        </div>
-        <div class="modal fade" id="0" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <img src="assets\public_html\argentina_programa_2022_Hernán_Cifalá.jpg" width="100%" height="100%" class="center">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <p class="texto" i18n="@@F2">Capacitación #SéProgramar completa. Cursando #YoProgramo. Conocimientos adquiridos:</p>     
-            <ul>
-                <li class="lista" i18n="@@F2-1">Buenas prácticas de programación.</li>
-                <li class="lista" i18n="@@F2-2">Desarrollo Web Front End.</li>
-                <li class="lista" i18n="@@F2-3">HTML, CSS, JavaScript, Typescript.</li>
-                <li class="lista" i18n="@@F2-4">Bootstrap, Angular.</li>
-                <li class="lista" i18n="@@F2-5">Git, Github.</li>
-            </ul>
-        </div>
-        <hr style="width:50%;height:2px;border-color:white;margin-top:50px;margin-bottom:50px;margin-left:auto;margin-right:auto;">
-    </div>
-    
-    <div class="row fondo">
-        <div class="col-sm-6">
-            <img src={{formaciones[1].certificacion}} class="certificado" width="75%" height="75%" type="button" data-bs-toggle="modal" data-bs-target="#utn" alt="Certificado - Unity">
-        </div>
-        <div class="modal fade" id="1" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <img src="assets\public_html\Certificado - Experto Universitario en Programación de Videojuegos con Unity - Hernán Cifalá.jpg" width="100%" height="100%" class="center">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <p class="texto" i18n="@@F3">Capacitación extensa sobre el desarrollo de videojuegos con Unity. Conocimientos adquiridos:</p>
-            <ul>
-                <li class="lista" i18n="@@F3-1">Programación en C#.</li>
-                <li class="lista" i18n="@@F3-2">Uso de scripts para definición de comportamientos.</li>
-                <li class="lista" i18n="@@F3-3">Conceptos avanzados de la programación orientada a objetos.</li>
-                <li class="lista" i18n="@@F3-4">Optimización del código.</li>
-            </ul>
-        </div>
-        <hr style="width:50%;height:2px;border-color:white;margin-top:50px;margin-bottom:50px;margin-left:auto;margin-right:auto;">
-    </div>
-    
-    <div class="row fondo">
-        <div class="col-sm-6">
-            <img src={{formaciones[2].certificacion}} class="certificado" width="75%" height="75%" type="button" data-bs-toggle="modal" data-bs-target="#google" alt="Certificado - Análisis de Datos">
-        </div>
-        <div class="modal fade" id="2" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <img src="assets\public_html\Google Data Analytics Professional Certificate.jpg" width="100%" height="100%" class="center">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <p class="texto" i18n="@@F4">Capacitación extensa relacionada al análisis de datos complejo. Conocimientos adquiridos:</p>
-            <ul>
-                <li class="lista" i18n="@@F4-1">Recolección, procesamiento, análisis y visualización de datos.</li>
-                <li class="lista" i18n="@@F4-2">Uso avanzado de hojas de cálculo.</li>
-                <li class="lista" i18n="@@F4-3">Manejo de bases de datos con SQL.</li>
-                <li class="lista" i18n="@@F4-4">Programación en R.</li>
-            </ul>
-        </div>
-        <hr style="width:50%;height:2px;border-color:white;margin-top:50px;margin-bottom:50px;margin-left:auto;margin-right:auto;">
-    </div>
-    
-    <div class="row fondo">
-        <div class="col-sm-6">
-            <img src={{formaciones[3].certificacion}} class="certificado" width="75%" height="75%" type="button" data-bs-toggle="modal" data-bs-target="#cambridge" alt="Certificado - First Certificate Exam">
-        </div>
-        <div class="modal fade" id="3" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <img src="assets\public_html\StatementOfResult_FCE.jpg" width="100%" height="100%" class="center">
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <p class="texto" i18n="@@F5">Aprobado el First Certificate Exam in English. Certifica:</p>
-            <ul>
-                <li class="lista" i18n="@@F5-1">Nivel avanzado de inglés.</li>
-            </ul>
-        </div>
-    </div>
-    -->
 
 </div>

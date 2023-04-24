@@ -7,7 +7,14 @@
     
     <div class="row fondo">
         <div class="col-sm-12">
-            <img style="padding-top: 90px;padding-bottom: 90px;" src={{habilidad[0].ruta}} class="skills" width="75%" height="100%" alt="Habilidades">
+            <img src={{habilidad[0].ruta}} class="skills" width="75%" height="100%" data-bs-toggle="modal" data-bs-target="#habilidad" alt="Habilidades y Competencias">
         </div>
     </div>
+
+    <div class="modal fade" id="habilidad" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+                <img src={{habilidad[0].ruta}} width="100%" height="100%" class="center">
+        </div>
+    </div>
+    
 </div>

@@ -3,13 +3,13 @@ export class Experiencia {
     id : Number;
     nombre : String;
     actual : Boolean;
-    inicio : Date;
-    fin : Date;
+    inicio : String;
+    fin : String;
     logo : String;
     descripcion : String;
     tipo : String;
 
-    constructor(id : Number, nombre : String, actual : Boolean, inicio : Date, fin : Date, logo : String, descripcion : String, tipo : String) {
+    constructor(id : Number, nombre : String, actual : Boolean, inicio : String, fin : String, logo : String, descripcion : String, tipo : String) {
         this.id = id;
         this.nombre = nombre;
         this.actual = actual;
