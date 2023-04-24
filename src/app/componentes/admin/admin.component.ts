@@ -1,3 +1,4 @@
+import { KeyValue } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -41,7 +42,7 @@ export class AdminComponent {
 
   Conocimiento:Conocimientos = new Conocimientos(0,"",0);
   Contacto:Contacto = new Contacto(0,"","");
-  Experiencia:Experiencia = new Experiencia(0,"",false,new Date(),new Date(),"","","");
+  Experiencia:Experiencia = new Experiencia(0,"",false,"","","","","");
   Formacion:Formacion = new Formacion(0,"","","");
   Habilidad:Habilidad = new Habilidad(0,"");
   Herramienta:Herramientas = new Herramientas(0,"",0);
@@ -49,10 +50,8 @@ export class AdminComponent {
   Proyecto:Proyecto = new Proyecto(0,"","","");
   Tarea:Tareas = new Tareas(0,"",0);
 
-  servicio:any;
   elemento:any;
-  clase:any;
-  id:string = "id";
+  servicio:any;
 
   constructor(private login:LoginService, private router:Router,
     public servicioCono:ConocimientosService, public servicioConta:ContactoService,
@@ -63,6 +62,7 @@ export class AdminComponent {
 
   ngOnInit(): void {
     this.getElementos();
+    this.elemento = new class{};
   }
 
   getElementos() {
@@ -95,34 +95,31 @@ export class AdminComponent {
     })
   }
 
-  setActual(elemento:any, servicio:any, clase:any) {
+  setActual(elemento:any, servicio:any) {
     this.elemento = elemento;
     this.servicio = servicio;
-    this.clase = clase;
-    console.log(elemento);
+    console.log(this.elemento);
   }
 
   eliminar() {
     console.log("Se ha eliminado " + this.elemento);
     this.servicio.delete(this.elemento.id).subscribe((data: any) => {
       console.log(data);
-      this.getElementos();
     })
   }
   
-  crear() {
-    console.log("Se ha creado " + this.clase);
-    console.log(this.clase);
-    console.log(this.elemento);
+  crear(elemento:any) {
+    console.log("Se ha creado: " + elemento);
+    this.servicio.post(elemento).subscribe((data: any) => {
+      console.log(data);
+    })
   }
 
-  editar() {
-    console.log("Se ha creado " + this.clase);
-    console.log(this.clase);
-    console.log(this.elemento);
-  }
-
-  compare() {
+  editar(elemento:any) {
+    console.log("Se ha editado: " + elemento);
+    this.servicio.put(this.elemento.id, elemento).subscribe((data: any) => {
+      console.log(data);
+    })
   }
 
   onLogout() {
@@ -136,6 +133,10 @@ export class AdminComponent {
         console.log(error);
         console.log("Fallo al cerrar sesion");
     })
+  }
+
+  originalOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
+    return 0;
   }
 
 }

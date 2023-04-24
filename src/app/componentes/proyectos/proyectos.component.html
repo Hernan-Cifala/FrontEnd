@@ -7,15 +7,15 @@
 
     <div class="row fondo">
         <div class="col-sm-4" *ngFor = "let proyecto of proyectos">
-            <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@P2A">{{proyecto.titulo}}</h4>
-            <p class="texto alineado" style="padding-bottom: 20px;" i18n="@@P2B">{{proyecto.subtitulo}}</p>
+            <h4 class="texto alineado" style="font-size: 16pt;">{{proyecto.titulo}}</h4>
+            <p class="texto alineado" style="padding-bottom: 20px;">{{proyecto.subtitulo}}</p>
             <ul>
                 <div *ngFor = "let tarea of tareas">
                     <li class="lista" *ngIf = "tarea.proyecto_id == proyecto.id">{{tarea.tarea}}</li>
                 </div>
             </ul>
 
-            <div class="text-center"><button type="button" (click)="setActual(proyecto)" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#proyecto" i18n="@@P2-B">Ver más...</button></div>
+            <div class="text-center"><button type="button" (click)="setActual(proyecto)" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#proyecto" i18n="@@P2">Ver más...</button></div>
         </div>
     </div>
 
@@ -23,15 +23,15 @@
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header fondo">
-                    <h4 class="modal-title" id="titulo" i18n="@@P2-5"><b>{{modal.titulo}}</b></h4>
+                    <h4 class="modal-title" id="titulo"><b>{{modal.titulo}}</b></h4>
                     <button type="button" class="btn-close" style="background-color: lightblue;" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body fondo">
-                    <h5 i18n="@@P2-6">{{modal.subtitulo}}</h5>
+                    <h5>{{modal.subtitulo}}</h5>
                     <br>
-                    <p i18n="@@P2-7">{{modal.descripcion}}</p>
+                    <p>{{modal.descripcion}}</p>
                     <br>
-                    <p><b i18n="@@P2-8">Herramientas utilizadas:</b></p>
+                    <p><b i18n="@@P3">Herramientas utilizadas:</b></p>
                     <br>
                     <ul>
                         <div *ngFor = "let herramienta of herramientas">
@@ -39,7 +39,7 @@
                         </div>
                     </ul>
                     <br>
-                    <p><b i18n="@@P2-12">Tareas realizadas:</b></p>
+                    <p><b i18n="@@P4">Tareas realizadas:</b></p>
                     <br>
                     <ul>
                         <div *ngFor = "let tarea of tareas">
@@ -55,157 +55,5 @@
             </div>
         </div>
     </div>
-
-    <!--
-    <div class="row fondo">
-        <div class="col-sm-4">
-            <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@P2A">Portfolio</h4>
-            <p class="texto alineado" i18n="@@P2B">El desarrollo de este portfolio.</p>
-            <ul>
-                <li i18n="@@P2-1">Uso de HTML, CSS y JavaScript.</li>
-                <li i18n="@@P2-2">Implementación con Bootstrap y Angular.</li>
-                <li i18n="@@P2-3">Creación de repositorios local y remoto.</li>
-                <li i18n="@@P2-4">Desarrollo Front End dinámico.</li>
-            </ul>
-            <div class="text-center"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#portfolio" i18n="@@P2-B">Ver más...</button></div>
-            
-            <div class="modal fade" id="portfolio" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header fondo">
-                            <h4 class="modal-title" id="titulo" i18n="@@P2-5"><b>Portfolio</b></h4>
-                            <button type="button" class="btn-close" style="background-color: lightblue;" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body fondo">
-                            <div>
-                                <h5 i18n="@@P2-6">El desarrollo de este portfolio.</h5>
-                                <br>
-                                <p i18n="@@P2-7">Utilizando una serie de tecnologías dedicadas al desarrollo web, mi objetivo consistió en diseñar un portfolio en el cual presentar los detalles sobre mi formación, experiencia laboral, competencias y proyectos realizados con éxito. </p>
-                                <br>
-                                <b i18n="@@P2-8">Herramientas utilizadas:</b>
-                                <br>
-                                <ul>
-                                    <li i18n="@@P2-9">HTML, CSS. JavaScript, Typescript (Bootstrap, Angular).</li>
-                                    <li i18n="@@P2-10">SQL (MySQL).</li>
-                                    <li i18n="@@P2-11">Visual Studio Code, Git/Github, Firebase.</li>
-                                </ul>
-                                <br>
-                                <b i18n="@@P2-12">Tareas realizadas:</b>
-                                <br>
-                                <ol>
-                                    <li i18n="@@P2-13">Desarrollo Web Full Stack.</li>
-                                    <li i18n="@@P2-14">Creación de repositorios local y remoto.</li>
-                                    <li i18n="@@P2-15">Hosteo en Firebase.</li>
-                                </ol>
-                                <br>
-                                <img src="">
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@P3A">Proyecto "Oeste Salvaje"</h4>
-            <p class="texto alineado" i18n="@@P3B">Videojuego desarrollado con Unity.</p>
-            <ul>
-                <li i18n="@@P3-1">Programación con C#.</li>
-                <li i18n="@@P3-2">Diseño de niveles y escenarios.</li>
-                <li i18n="@@P3-3">Animaciones e IA avanzada.</li>
-                <li i18n="@@P3-4">Sistema de físicas y proyectiles.</li>
-                <li i18n="@@P3-5">Elementos de UI interactivos.</li>
-            </ul>
-
-            <div class="text-center"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#juego" i18n="@@P3-B">Ver más...</button></div>
-
-            <div class="modal fade" id="juego" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header fondo">
-                            <h4 class="modal-title" id="titulo" i18n="@@P3-6"><b>Proyecto "Oeste Salvaje"</b></h4>
-                            <button type="button" class="btn-close" style="background-color: lightblue;" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body fondo">
-                            <div>
-                                <h5 i18n="@@P3-7">Videojuego desarrollado con Unity.</h5>
-                                <br>
-                                <p i18n="@@P3-8">El proyecto abarca el desarrollo de un juego avanzado utilizando el motor de Unity. Mi objetivo consistió en diseñar e implementar todos los elementos requeridos para llevar a cabo el desarrollo de un videojuego complejo, dinámico e interactivo. </p>
-                                <br>
-                                <b i18n="@@P3-9">Herramientas utilizadas:</b>
-                                <br>
-                                <ul>
-                                    <li i18n="@@P3-10">C# (Unity).</li>
-                                </ul>
-                                <br>
-                                <b i18n="@@P3-11">Tareas realizadas:</b>
-                                <br>
-                                <ol>
-                                    <li i18n="@@P3-12">Importación de objetos, audio y gráficos.</li>
-                                    <li i18n="@@P3-13">Definición de los personajes jugador y enemigo.</li>
-                                    <li i18n="@@P3-14">Creación y diseño de niveles.</li>
-                                    <li i18n="@@P3-15">Implementación de sistemas de IA, animaciones y físicas.</li>
-                                </ol>
-                                <br>
-                                <video src=""></video>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="col-sm-4">
-            <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@P4A">Sales Conversion Optimization</h4>
-            <p class="texto alineado" i18n="@@P4B">Análisis sobre campañas de marketing de una empresa.</p>
-            <ul>
-                <li i18n="@@P4-1">Procesamiento de datos en Excel y SQLite.</li>
-                <li i18n="@@P4-2">Análisis y visualización de datos con R.</li>
-                <li i18n="@@P4-3">Presentación de resultados en PowerPoint.</li>
-            </ul>
-
-            <div class="text-center"><button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#analisis" i18n="@@P4-B">Ver más...</button></div>
-
-            <div class="modal fade" id="analisis" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header fondo">
-                            <h4 class="modal-title" id="titulo" i18n="@@P4-4"><b>Sales Conversion Optimization</b></h4>
-                            <button type="button" class="btn-close" style="background-color: lightblue;" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body fondo">
-                            <div>
-                                <h5 i18n="@@P4-5">Análisis sobre campañas de marketing de una empresa.</h5>
-                                <br>
-                                <p i18n="@@P4-6">Una organización llevó a cabo tres campañas de publicidad en redes sociales. Mi objetivo consistió en determinar el éxito de estas iniciativas, identificar aspectos relevantes y brindar recomendaciones para futuras campañas. </p>
-                                <br>
-                                <b i18n="@@P4-7">Herramientas utilizadas:</b>
-                                <br>
-                                <ul>
-                                    <li i18n="@@P4-8">Microsoft Office.</li>
-                                    <li i18n="@@P4-9">SQL (SQLite + DB Browser).</li>
-                                    <li i18n="@@P4-10">R (RStudio Desktop).</li>
-                                </ul>
-                                <br>
-                                <b i18n="@@P4-11">Tareas realizadas:</b>
-                                <br>
-                                <ol>
-                                    <li i18n="@@P4-12">Procesamiento, limpieza y verificación de datos.</li>
-                                    <li i18n="@@P4-13">Análisis y resumen de la información.</li>
-                                    <li i18n="@@P4-14">Visualización y presentación de los resultados.</li>
-                                </ol>
-                                <br>
-                                <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQi6UNHhQQOpr8hEIs0VIBx-JvT4fJ1dt4d8nBA8lBNjbRpzId4eUqAbQQ3cLXSaw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="720" height="360" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>    
-    </div>
-    -->
     
 </div>

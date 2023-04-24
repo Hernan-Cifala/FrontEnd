@@ -12,7 +12,7 @@
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
         <h2 class="categoria" i18n="@@X1"><b>Información Personal</b></h2>
-        <button class="btn btn-dark" (click)="setActual(personas[0], servicioPerso, Persona)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+        <button class="btn btn-dark" (click)="setActual(personas[0], servicioPerso)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarPersona" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let persona of personas">
             <p><b>{{persona.nombre}} {{persona.apellido}}</b></p>
@@ -25,11 +25,11 @@
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
         <h2 class="categoria" i18n="@@X1"><b>Experiencia Laboral</b></h2>
-        <button class="btn btn-dark" (click)="setActual(experiencias[0], servicioExpe, Experiencia)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+        <button class="btn btn-dark" (click)="setActual(Experiencia, servicioExpe)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearExperiencia" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let experiencia of experiencias">
-            <button class="btn btn-dark" (click)="setActual(experiencia, servicioExpe, Experiencia)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
-            <button class="btn btn-dark" (click)="setActual(experiencia, servicioExpe, Experiencia)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(experiencia, servicioExpe)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarExperiencia" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(experiencia, servicioExpe)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
             <p><b>{{experiencia.nombre}} ( {{experiencia.inicio}} - {{experiencia.fin}} )</b></p>
             <p>{{experiencia.actual}}</p>
             <p>{{experiencia.descripcion}}</p>
@@ -41,20 +41,20 @@
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
         <h2 class="categoria" i18n="@@X1"><b>Formación Profesional</b></h2>
-        <button class="btn btn-dark" (click)="setActual(formaciones[0], servicioForma, Formacion)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+        <button class="btn btn-dark" (click)="setActual(Formacion, servicioForma)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearFormacion" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let formacion of formaciones">
-            <button class="btn btn-dark" (click)="setActual(formacion, servicioForma, Formacion)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
-            <button class="btn btn-dark" (click)="setActual(formacion, servicioForma, Formacion)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(formacion, servicioForma)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarFormacion" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(formacion, servicioForma)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
             <p><b>{{formacion.nombre}}</b></p>
             <p>{{formacion.descripcion}}</p>
             <p>{{formacion.certificacion}}</p>
-            <button class="btn btn-sm btn-dark" (click)="setActual(conocimientos[0], servicioCono, Conocimiento)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 20px;"></i></button>
+            <button class="btn btn-sm btn-dark" (click)="setActual(Conocimiento, servicioCono)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearConocimiento" style="font-size: 20px;"></i></button>
             <ul>
                 <div *ngFor = "let conocimiento of conocimientos">
                     <li *ngIf = "conocimiento.formacion_id == formacion.id">{{conocimiento.conocimiento}}
-                        <button class="btn btn-sm btn-dark" (click)="setActual(conocimiento, servicioCono, Conocimiento)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 20px;"></i></button>
-                        <button class="btn btn-sm btn-dark" (click)="setActual(conocimiento, servicioCono, Conocimiento)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(conocimiento, servicioCono)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarConocimiento" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(conocimiento, servicioCono)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
                     </li>
                 </div>
             </ul>
@@ -64,7 +64,7 @@
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
         <h2 class="categoria" i18n="@@X1"><b>Habilidades y Competencias</b></h2>
-        <button class="btn btn-dark" (click)="setActual(habilidades[0], servicioHabi, Habilidad)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
+        <button class="btn btn-dark" (click)="setActual(habilidades[0], servicioHabi)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarHabilidad" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let habilidad of habilidades">
             <p><b>{{habilidad.ruta}}</b></p>
@@ -74,29 +74,29 @@
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
         <h2 class="categoria" i18n="@@X1"><b>Proyectos Recientes</b></h2>
-        <button class="btn btn-dark" (click)="setActual(proyectos[0], servicioProye, Proyecto)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+        <button class="btn btn-dark" (click)="setActual(Proyecto, servicioProye)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearProyecto" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let proyecto of proyectos">
-            <button class="btn btn-dark" (click)="setActual(proyecto, servicioProye, Proyecto)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
-            <button class="btn btn-dark" (click)="setActual(proyecto, servicioProye, Proyecto)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(proyecto, servicioProye)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarProyecto" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(proyecto, servicioProye)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
             <p><b>{{proyecto.titulo}}</b></p>
             <p>{{proyecto.subtitulo}}</p>
             <p>{{proyecto.descripcion}}</p>
-            <button class="btn btn-sm btn-dark" (click)="setActual(tareas[0], servicioTare, Tarea)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 20px;"></i></button>
+            <button class="btn btn-sm btn-dark" (click)="setActual(Tarea, servicioTare)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearTarea" style="font-size: 20px;"></i></button>
             <ul>
                 <div *ngFor = "let tarea of tareas">
                     <li *ngIf = "tarea.proyecto_id == proyecto.id">{{tarea.tarea}}
-                        <button class="btn btn-sm btn-dark" (click)="setActual(tarea, servicioTare, Tarea)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 20px;"></i></button>
-                        <button class="btn btn-sm btn-dark" (click)="setActual(tarea, servicioTare, Tarea)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(tarea, servicioTare)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarTarea" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(tarea, servicioTare)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
                     </li>
                 </div>
             </ul>
-            <button class="btn btn-sm btn-dark" (click)="setActual(herramientas[0], servicioHerra, Herramienta)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 20px;"></i></button>
+            <button class="btn btn-sm btn-dark" (click)="setActual(Herramienta, servicioHerra)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearHerramienta" style="font-size: 20px;"></i></button>
             <ul>
                 <div *ngFor = "let herramienta of herramientas">
                     <li *ngIf = "herramienta.proyecto_id == proyecto.id">{{herramienta.herramienta}}
-                        <button class="btn btn-sm btn-dark" (click)="setActual(herramienta, servicioHerra, Herramienta)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 20px;"></i></button>
-                        <button class="btn btn-sm btn-dark" (click)="setActual(herramienta, servicioHerra, Herramienta)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(herramienta, servicioHerra)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarHerramienta" style="font-size: 20px;"></i></button>
+                        <button class="btn btn-sm btn-dark" (click)="setActual(herramienta, servicioHerra)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 20px;"></i></button>
                     </li>
                 </div>
             </ul>
@@ -106,77 +106,546 @@
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
         <h2 class="categoria" i18n="@@X1"><b>Información de Contacto</b></h2>
-        <button class="btn btn-dark" (click)="setActual(contactos[0], servicioConta, Contacto)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crear" style="font-size: 24px;"></i></button>
+        <button class="btn btn-dark" (click)="setActual(Contacto, servicioConta)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearContacto" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let contacto of contactos">
-            <button class="btn btn-dark" (click)="setActual(contacto, servicioConta, Contacto)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editar" style="font-size: 24px;"></i></button>
-            <button class="btn btn-dark" (click)="setActual(contacto, servicioConta, Contacto)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(contacto, servicioConta)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarContacto" style="font-size: 24px;"></i></button>
+            <button class="btn btn-dark" (click)="setActual(contacto, servicioConta)" style="color: white;"><i class="fa-regular fa-x" data-bs-toggle="modal" data-bs-target="#eliminar" style="font-size: 24px;"></i></button>
             <p><b>{{contacto.info}}</b></p>
             <p>{{contacto.link}}</p>
         </div>
     </div>
 
-    <div class="modal fade" style="color: black;" id="eliminar" tabindex="-1" aria-hidden="true">
+    <!-- Formulario de eliminación global -->
+    <div class="modal fade" style="color: black;" id="eliminar" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <div class="modal-header">    
+                    <h3 class="modal-title" id="titulo"><b>Eliminar Elemento</b></h3>       
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
-                    <p>¿Está seguro de que desea eliminar  ?</p>
+                    <p>¿Está seguro de que desea eliminar este elemento?</p>
+                    <br>
+                    <div *ngFor = "let item of elemento | keyvalue: originalOrder">
+                        <p><b style="text-transform: capitalize;">{{item.key}}:</b> {{item.value}}</p>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="submit" (click)="eliminar()" data-bs-dismiss="modal">Sí</button>
-                    <button type="btn-close" data-bs-dismiss="modal">No</button>
+                    <button type="submit" class="btn btn-danger" (click)="eliminar()" data-bs-dismiss="modal">Sí</button>
+                    <button type="btn-close" class="btn btn-success" data-bs-dismiss="modal">No</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" style="color: black;" id="crear" tabindex="-1" aria-hidden="true">
+    <!-- Formularios Conocimiento -->
+    <div class="modal fade" style="color: black;" id="crearConocimiento" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Crear Conocimiento</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
                 <div class="modal-body">
-                    <h3>Crear Elemento</h3>
-                    <form (ngSubmit) = "crear()">
-                        <div class="form-group" *ngFor = "let item of clase | keyvalue;">
-                            <div *ngIf = "item.key != id">
-                                <label style="text-transform: capitalize;"><b>{{item.key}}</b></label>
-                                <input type="text" class ="form-control" id = {{item.key}}
-                                    [(ngModel)] = "clase.item" name = {{item.key}}>
-                            </div>
+                    <form>
+                        <div class="form-group">
+                            <label><b>Conocimiento</b></label>
+                            <input type="text" class ="form-control" id = "conocimiento" 
+                                [(ngModel)] = "elemento.conocimiento" name = "conocimiento">
                         </div>
+                        <div class="form-group">
+                            <label><b>Formacion ID</b></label>
+                            <input type="text" class ="form-control" id = "formacion_id"
+                                [(ngModel)] = "elemento.formacion_id" name = "formacion_id">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="crear(elemento)" data-bs-dismiss="modal">Crear</button>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="submit">Crear</button>
-                </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" style="color: black;" id="editar" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" style="color: black;" id="editarConocimiento" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-body">
-                    <h3>Editar Elemento</h3>
-                    <form (ngSubmit) = "editar()">
-                        <div class="form-group" *ngFor = "let item of clase | keyvalue">
-                            <div *ngIf = "item.key != id">
-                                <label style="text-transform: capitalize;"><b>{{item.key}}</b></label>
-                                <input type="text" class ="form-control" id = {{item.key}}
-                                    [(ngModel)] = "clase.item" name = {{item.key}}>
-                            </div>
-                        </div>
-                    </form>
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Conocimiento</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-footer">
-                    <button type="submit">Editar</button>
-
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Conocimiento</b></label>
+                            <input type="text" class ="form-control" id = "conocimiento" 
+                                [(ngModel)] = "elemento.conocimiento" name = "conocimiento">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Formacion ID</b></label>
+                            <input type="text" class ="form-control" id = "formacion_id"
+                                [(ngModel)] = "elemento.formacion_id" name = "formacion_id">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Formularios Contacto -->
+    <div class="modal fade" style="color: black;" id="crearContacto" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Crear Contacto</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Información de Contacto</b></label>
+                            <input type="text" class ="form-control" id = "info" 
+                                [(ngModel)] = "elemento.info" name = "info">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Link</b></label>
+                            <input type="text" class ="form-control" id = "link"
+                                [(ngModel)] = "elemento.link" name = "link">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="crear(elemento)" data-bs-dismiss="modal">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!--
+    <div class="modal fade" style="color: black;" id="editarContacto" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Contacto</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Información de Contacto</b></label>
+                            <input type="text" class ="form-control" id = "info" 
+                                [(ngModel)] = "elemento.info" name = "info">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Link</b></label>
+                            <input type="text" class ="form-control" id = "link"
+                                [(ngModel)] = "elemento.link" name = "link">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formularios Experiencia -->
+    <div class="modal fade" style="color: black;" id="crearExperiencia" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Crear Experiencia</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Nombre de la Empresa</b></label>
+                            <input type="text" class ="form-control" id = "nombre" 
+                                [(ngModel)] = "elemento.nombre" name = "nombre">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Trabajo Actual</b></label>
+                            <input type="text" class ="form-control" id = "actual"
+                                [(ngModel)] = "elemento.actual" name = "actual">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Fecha de Inicio</b></label>
+                            <input type="text" class ="form-control" id = "inicio" 
+                                [(ngModel)] = "elemento.inicio" name = "inicio">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Fecha de Fin</b></label>
+                            <input type="text" class ="form-control" id = "fin" 
+                                [(ngModel)] = "elemento.fin" name = "fin">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Logo</b></label>
+                            <input type="text" class ="form-control" id = "logo" 
+                                [(ngModel)] = "elemento.logo" name = "logo">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Descripcion</b></label>
+                            <input type="text" class ="form-control" id = "descripcion" 
+                                [(ngModel)] = "elemento.descripcion" name = "descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Tipo</b></label>
+                            <input type="text" class ="form-control" id = "tipo" 
+                                [(ngModel)] = "elemento.tipo" name = "tipo">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="crear(elemento)" data-bs-dismiss="modal">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="editarExperiencia" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Experiencia</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Nombre de la Empresa</b></label>
+                            <input type="text" class ="form-control" id = "nombre" 
+                                [(ngModel)] = "elemento.nombre" name = "nombre">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Trabajo Actual</b></label>
+                            <input type="text" class ="form-control" id = "actual"
+                                [(ngModel)] = "elemento.actual" name = "actual">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Fecha de Inicio</b></label>
+                            <input type="text" class ="form-control" id = "inicio" 
+                                [(ngModel)] = "elemento.inicio" name = "inicio">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Fecha de Fin</b></label>
+                            <input type="text" class ="form-control" id = "fin" 
+                                [(ngModel)] = "elemento.fin" name = "fin">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Logo</b></label>
+                            <input type="text" class ="form-control" id = "logo" 
+                                [(ngModel)] = "elemento.logo" name = "logo">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Descripcion</b></label>
+                            <input type="text" class ="form-control" id = "descripcion" 
+                                [(ngModel)] = "elemento.descripcion" name = "descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Tipo</b></label>
+                            <input type="text" class ="form-control" id = "tipo" 
+                                [(ngModel)] = "elemento.tipo" name = "tipo">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formularios Formacion -->
+    <div class="modal fade" style="color: black;" id="crearFormacion" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Crear Formacion</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Nombre</b></label>
+                            <input type="text" class ="form-control" id = "nombre" 
+                                [(ngModel)] = "elemento.nombre" name = "nombre">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Descripcion</b></label>
+                            <input type="text" class ="form-control" id = "descripcion"
+                                [(ngModel)] = "elemento.descripcion" name = "descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Certificacion</b></label>
+                            <input type="text" class ="form-control" id = "certificacion" 
+                                [(ngModel)] = "elemento.certificacion" name = "certificacion">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="crear(elemento)" data-bs-dismiss="modal">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="editarFormacion" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Formacion</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Nombre</b></label>
+                            <input type="text" class ="form-control" id = "nombre" 
+                                [(ngModel)] = "elemento.nombre" name = "nombre">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Descripcion</b></label>
+                            <input type="text" class ="form-control" id = "descripcion"
+                                [(ngModel)] = "elemento.descripcion" name = "descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Certificacion</b></label>
+                            <input type="text" class ="form-control" id = "certificacion" 
+                                [(ngModel)] = "elemento.certificacion" name = "certificacion">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario Habilidad -->
+    <div class="modal fade" style="color: black;" id="editarHabilidad" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Habilidad</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Ruta de la Imagen</b></label>
+                            <input type="text" class ="form-control" id = "ruta" 
+                                [(ngModel)] = "elemento.ruta" name = "ruta">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formularios Herramienta -->
+    <div class="modal fade" style="color: black;" id="crearHerramienta" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Crear Herramienta</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Herramienta</b></label>
+                            <input type="text" class ="form-control" id = "herramienta" 
+                                [(ngModel)] = "elemento.herramienta" name = "herramienta">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Proyecto ID</b></label>
+                            <input type="text" class ="form-control" id = "proyecto_id"
+                                [(ngModel)] = "elemento.proyecto_id" name = "proyecto_id">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="crear(elemento)" data-bs-dismiss="modal">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="editarHerramienta" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Herramienta</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Herramienta</b></label>
+                            <input type="text" class ="form-control" id = "herramienta" 
+                                [(ngModel)] = "elemento.herramienta" name = "herramienta">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Proyecto ID</b></label>
+                            <input type="text" class ="form-control" id = "proyecto_id"
+                                [(ngModel)] = "elemento.proyecto_id" name = "proyecto_id">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Formulario Persona -->
+    <div class="modal fade" style="color: black;" id="editarPersona" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Persona</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Nombre</b></label>
+                            <input type="text" class ="form-control" id = "nombre" 
+                                [(ngModel)] = "elemento.nombre" name = "nombre">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Apellido</b></label>
+                            <input type="text" class ="form-control" id = "apellido"
+                                [(ngModel)] = "elemento.apellido" name = "apellido">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Titulo</b></label>
+                            <input type="text" class ="form-control" id = "titulo" 
+                                [(ngModel)] = "elemento.titulo" name = "titulo">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Resumen</b></label>
+                            <input type="text" class ="form-control" id = "resumen"
+                                [(ngModel)] = "elemento.resumen" name = "resumen">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Foto</b></label>
+                            <input type="text" class ="form-control" id = "foto" 
+                                [(ngModel)] = "elemento.foto" name = "foto">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formularios Proyecto -->
+    <div class="modal fade" style="color: black;" id="crearProyecto" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Crear Proyecto</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Titulo</b></label>
+                            <input type="text" class ="form-control" id = "titulo" 
+                                [(ngModel)] = "elemento.titulo" name = "titulo">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Subtitulo</b></label>
+                            <input type="text" class ="form-control" id = "subtitulo"
+                                [(ngModel)] = "elemento.subtitulo" name = "subtitulo">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Descripcion</b></label>
+                            <input type="text" class ="form-control" id = "descripcion" 
+                                [(ngModel)] = "elemento.descripcion" name = "descripcion">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="crear(elemento)" data-bs-dismiss="modal">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="editarProyecto" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Proyecto</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Titulo</b></label>
+                            <input type="text" class ="form-control" id = "titulo" 
+                                [(ngModel)] = "elemento.titulo" name = "titulo">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Subtitulo</b></label>
+                            <input type="text" class ="form-control" id = "subtitulo"
+                                [(ngModel)] = "elemento.subtitulo" name = "subtitulo">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Descripcion</b></label>
+                            <input type="text" class ="form-control" id = "descripcion" 
+                                [(ngModel)] = "elemento.descripcion" name = "descripcion">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formularios Tarea -->
+    <div class="modal fade" style="color: black;" id="crearTarea" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Crear Tarea</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Tarea</b></label>
+                            <input type="text" class ="form-control" id = "tarea" 
+                                [(ngModel)] = "elemento.tarea" name = "tarea">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Proyecto ID</b></label>
+                            <input type="text" class ="form-control" id = "proyecto_id"
+                                [(ngModel)] = "elemento.proyecto_id" name = "proyecto_id">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="crear(elemento)" data-bs-dismiss="modal">Crear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" style="color: black;" id="editarTarea" tabindex="-1" aria-hidden="true" aria-labelledby="titulo" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="titulo"><b>Editar Tarea</b></h3>           
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label><b>Tarea</b></label>
+                            <input type="text" class ="form-control" id = "tarea" 
+                                [(ngModel)] = "elemento.tarea" name = "tarea">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Proyecto ID</b></label>
+                            <input type="text" class ="form-control" id = "proyecto_id"
+                                [(ngModel)] = "elemento.proyecto_id" name = "proyecto_id">
+                        </div>
+                        <button type="submit" class="btn btn-success" (click)="editar(elemento)" data-bs-dismiss="modal">Editar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones utilizados:
+
     <div class="row fondo">
         <div>
             <button class="btn btn-dark" style="color: white;"><i class="fa-solid fa-pen-to-square" style="font-size: 24px;"></i></button>
@@ -189,6 +658,7 @@
             <button class="btn btn-sm btn-dark" style="color: white;"><i class="fa-regular fa-plus" style="font-size: 20px;"></i></button>
         </div>    
     </div>
+
     -->
 
 </div>
