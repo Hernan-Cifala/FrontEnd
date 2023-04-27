@@ -8,7 +8,7 @@ import { Conocimientos } from '../modelos/conocimientos';
 })
 export class ConocimientosService {
 
-  url = 'http://localhost:8080/conocimientos/';
+  url = 'https://portfolio-backend-ywnb.onrender.com/conocimientos/';
 
   constructor(private http:HttpClient) { }
 

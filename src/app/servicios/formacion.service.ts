@@ -8,7 +8,7 @@ import { Formacion } from '../modelos/formacion';
 })
 export class FormacionService {
 
-  url = 'http://localhost:8080/formacion/';
+  url = 'https://portfolio-backend-ywnb.onrender.com/formacion/';
 
   constructor(private http:HttpClient) { }
 

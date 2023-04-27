@@ -8,7 +8,7 @@ import { Herramientas } from '../modelos/herramientas';
 })
 export class HerramientasService {
 
-  url = 'http://localhost:8080/herramientas/';
+  url = 'https://portfolio-backend-ywnb.onrender.com/herramientas/';
 
   constructor(private http:HttpClient) { }
 

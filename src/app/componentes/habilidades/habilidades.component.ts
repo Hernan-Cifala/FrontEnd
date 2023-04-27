@@ -8,13 +8,13 @@ import { HabilidadService } from 'src/app/servicios/habilidad.service';
 })
 export class HabilidadesComponent {
 
-  habilidad:any;
+  habilidades:any;
 
   constructor(private servicio:HabilidadService) { }
 
   ngOnInit(): void {
     this.servicio.get().subscribe(data => {
-      this.habilidad = data;
+      this.habilidades = data;
     })
   }
 

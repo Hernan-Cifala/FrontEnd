@@ -2,592 +2,212 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="es" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="C1" datatype="html">
+      <trans-unit id="CON-1" datatype="html">
         <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Información de Contacto<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/contacto/contacto.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="E1" datatype="html">
+      <trans-unit id="ENC-1" datatype="html">
         <source>Iniciar Sesión</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/encabezado/encabezado.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="E2" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Iniciar Sesión<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+      <trans-unit id="EXP-1" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Experiencia Laboral<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/encabezado/encabezado.component.html</context>
-          <context context-type="linenumber">26</context>
+          <context context-type="sourcefile">src/app/componentes/experiencia/experiencia.component.html</context>
+          <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="E3" datatype="html">
-        <source>Correo electrónico</source>
+      <trans-unit id="EXP-2" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{experiencia.nombre}}"/> ( <x id="INTERPOLATION_1" equiv-text="{{experiencia.inicio}}"/> - <x id="INTERPOLATION_2" equiv-text="{{experiencia.fin}}"/> )<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/encabezado/encabezado.component.html</context>
-          <context context-type="linenumber">33</context>
+          <context context-type="sourcefile">src/app/componentes/experiencia/experiencia.component.html</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="E4" datatype="html">
-        <source>Contraseña</source>
+      <trans-unit id="EXP-3" datatype="html">
+        <source>Trabajo actual: <x id="INTERPOLATION" equiv-text="{{experiencia.actual}}"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/encabezado/encabezado.component.html</context>
-          <context context-type="linenumber">36</context>
+          <context context-type="sourcefile">src/app/componentes/experiencia/experiencia.component.html</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="E5" datatype="html">
-        <source>Iniciar Sesión</source>
+      <trans-unit id="EXP-4" datatype="html">
+        <source>Tipo de empleo: <x id="INTERPOLATION" equiv-text="{{experiencia.tipo}}"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/encabezado/encabezado.component.html</context>
-          <context context-type="linenumber">38</context>
+          <context context-type="sourcefile">src/app/componentes/experiencia/experiencia.component.html</context>
+          <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="E6" datatype="html">
-        <source>Ingreso reservado para administradores</source>
+      <trans-unit id="EXP-5" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{experiencia.descripcion}}"/></source>
         <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/encabezado/encabezado.component.html</context>
-          <context context-type="linenumber">43</context>
+          <context context-type="sourcefile">src/app/componentes/experiencia/experiencia.component.html</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="F1" datatype="html">
+      <trans-unit id="FOR-1" datatype="html">
         <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Formación Profesional<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="F2" datatype="html">
-        <source>Capacitación #SéProgramar completa. Cursando #YoProgramo. Conocimientos adquiridos:</source>
+      <trans-unit id="FOR-2" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/><x id="INTERPOLATION" equiv-text="{{formacion.nombre}}"/>:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/> <x id="INTERPOLATION_1" equiv-text="{{formacion.descripcion}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">13</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="F2-1" datatype="html">
-        <source>Buenas prácticas de programación.</source>
+      <trans-unit id="FOR-3" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{conocimiento.conocimiento}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="F2-2" datatype="html">
-        <source>Desarrollo Web Front End.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F2-3" datatype="html">
-        <source>HTML, CSS, JavaScript, Typescript.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">22</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F2-4" datatype="html">
-        <source>Bootstrap, Angular.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">23</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F2-5" datatype="html">
-        <source>Git, Github.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">24</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F3" datatype="html">
-        <source>Capacitación extensa sobre el desarrollo de videojuegos con Unity. Conocimientos adquiridos:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">40</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F3-1" datatype="html">
-        <source>Programación en C#.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">42</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F3-2" datatype="html">
-        <source>Uso de scripts para definición de comportamientos.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">43</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F3-3" datatype="html">
-        <source>Conceptos avanzados de la programación orientada a objetos.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">44</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F3-4" datatype="html">
-        <source>Optimización del código.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F4" datatype="html">
-        <source>Capacitación extensa relacionada al análisis de datos complejo. Conocimientos adquiridos:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">61</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F4-1" datatype="html">
-        <source>Recolección, procesamiento, análisis y visualización de datos.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F4-2" datatype="html">
-        <source>Uso avanzado de hojas de cálculo.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F4-3" datatype="html">
-        <source>Manejo de bases de datos con SQL.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F4-4" datatype="html">
-        <source>Programación en R.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F5" datatype="html">
-        <source>Aprobado el First Certificate Exam in English. Certifica:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">82</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="F5-1" datatype="html">
-        <source>Nivel avanzado de inglés.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/formacion/formacion.component.html</context>
-          <context context-type="linenumber">84</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="H1" datatype="html">
+      <trans-unit id="HAB-1" datatype="html">
         <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Habilidades y Competencias<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/habilidades/habilidades.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="A1" datatype="html">
-        <source>Programador</source>
+      <trans-unit id="LOG-1" datatype="html">
+        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Iniciar Sesión<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/login/login.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="LOG-2" datatype="html">
+        <source>Correo electrónico</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/login/login.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="LOG-3" datatype="html">
+        <source>Contraseña</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/login/login.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="LOG-4" datatype="html">
+        <source>Iniciar Sesión</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/login/login.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="LOG-5" datatype="html">
+        <source>Ingreso reservado para administradores</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/login/login.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="PRE-1" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{persona.titulo}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/presentacion/presentacion.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="3673517160424851159" datatype="html">
+      <trans-unit id="PRE-2" datatype="html">
         <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Resumen Profesional:<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/presentacion/presentacion.component.html</context>
           <context context-type="linenumber">15</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="A2" datatype="html">
-        <source>Pensador analítico con mentalidad técnica y atención al detalle busca insertarse al mercado laboral con el objetivo de expandir sus conocimientos de programación y ser parte de un equipo de desarrollo.</source>
+      <trans-unit id="PRE-3" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{persona.resumen}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/presentacion/presentacion.component.html</context>
           <context context-type="linenumber">16</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="P1" datatype="html">
+      <trans-unit id="PRO-1" datatype="html">
         <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Proyectos Recientes<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">5</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="P2A" datatype="html">
-        <source>Portfolio</source>
+      <trans-unit id="PRO-2" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{proyecto.titulo}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">10</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
       </trans-unit>
-      <trans-unit id="P2B" datatype="html">
-        <source>El desarrollo de este portfolio.</source>
+      <trans-unit id="PRO-3" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{proyecto.subtitulo}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">11</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="P2-1" datatype="html">
-        <source>Uso de HTML, CSS y JavaScript.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">13</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-2" datatype="html">
-        <source>Implementación con Bootstrap y Angular.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">14</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-3" datatype="html">
-        <source>Creación de repositorios local y remoto.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">15</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-4" datatype="html">
-        <source>Desarrollo Front End dinámico.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">16</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-B" datatype="html">
-        <source>Ver más...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">19</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-5" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Portfolio<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-6" datatype="html">
-        <source>El desarrollo de este portfolio.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="P2-7" datatype="html">
-        <source>Utilizando una serie de tecnologías dedicadas al desarrollo web, mi objetivo consistió en diseñar un portfolio en el cual presentar los detalles sobre mi formación, experiencia laboral, competencias y proyectos realizados con éxito. </source>
+      <trans-unit id="PRO-5" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{tarea.tarea}}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="PRO-7" datatype="html">
+        <source>Ver más...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="PRO-4" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{modal.descripcion}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">32</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="P2-8" datatype="html">
+      <trans-unit id="PRO-8" datatype="html">
         <source>Herramientas utilizadas:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="P2-9" datatype="html">
-        <source>HTML, CSS. JavaScript, Typescript (Bootstrap, Angular).</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">37</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-10" datatype="html">
-        <source>SQL (MySQL).</source>
+      <trans-unit id="PRO-6" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{herramienta.herramienta}}"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="P2-11" datatype="html">
-        <source>Visual Studio Code, Git/Github, Firebase.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-12" datatype="html">
+      <trans-unit id="PRO-9" datatype="html">
         <source>Tareas realizadas:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
           <context context-type="linenumber">42</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-13" datatype="html">
-        <source>Desarrollo Web Full Stack.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">45</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-14" datatype="html">
-        <source>Creación de repositorios local y remoto.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">46</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P2-15" datatype="html">
-        <source>Hosteo en Firebase.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">47</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3A" datatype="html">
-        <source>Proyecto &quot;Oeste Salvaje&quot;</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">60</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3B" datatype="html">
-        <source>Videojuego desarrollado con Unity.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">61</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-1" datatype="html">
-        <source>Programación con C#.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">63</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-2" datatype="html">
-        <source>Diseño de niveles y escenarios.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">64</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-3" datatype="html">
-        <source>Animaciones e IA avanzada.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">65</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-4" datatype="html">
-        <source>Sistema de físicas y proyectiles.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">66</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-5" datatype="html">
-        <source>Elementos de UI interactivos.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">67</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-B" datatype="html">
-        <source>Ver más...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">70</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-6" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Proyecto &quot;Oeste Salvaje&quot;<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">76</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-7" datatype="html">
-        <source>Videojuego desarrollado con Unity.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">81</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-8" datatype="html">
-        <source>El proyecto abarca el desarrollo de un juego avanzado utilizando el motor de Unity. Mi objetivo consistió en diseñar e implementar todos los elementos requeridos para llevar a cabo el desarrollo de un videojuego complejo, dinámico e interactivo. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">83</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-9" datatype="html">
-        <source>Herramientas utilizadas:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">85</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-10" datatype="html">
-        <source>C# (Unity).</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">88</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-11" datatype="html">
-        <source>Tareas realizadas:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">91</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-12" datatype="html">
-        <source>Importación de objetos, audio y gráficos.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">94</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-13" datatype="html">
-        <source>Definición de los personajes jugador y enemigo.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">95</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-14" datatype="html">
-        <source>Creación y diseño de niveles.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">96</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P3-15" datatype="html">
-        <source>Implementación de sistemas de IA, animaciones y físicas.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">97</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4A" datatype="html">
-        <source>Sales Conversion Optimization</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">110</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4B" datatype="html">
-        <source>Análisis sobre campañas de marketing de una empresa.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">111</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-1" datatype="html">
-        <source>Procesamiento de datos en Excel y SQLite.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">113</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-2" datatype="html">
-        <source>Análisis y visualización de datos con R.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">114</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-3" datatype="html">
-        <source>Presentación de resultados en PowerPoint.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">115</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-B" datatype="html">
-        <source>Ver más...</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">118</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-4" datatype="html">
-        <source><x id="START_BOLD_TEXT" ctype="x-b" equiv-text="&lt;b&gt;"/>Sales Conversion Optimization<x id="CLOSE_BOLD_TEXT" ctype="x-b" equiv-text="&lt;/b&gt;"/></source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">124</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-5" datatype="html">
-        <source>Análisis sobre campañas de marketing de una empresa.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">129</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-6" datatype="html">
-        <source>Una organización llevó a cabo tres campañas de publicidad en redes sociales. Mi objetivo consistió en determinar el éxito de estas iniciativas, identificar aspectos relevantes y brindar recomendaciones para futuras campañas. </source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">131</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-7" datatype="html">
-        <source>Herramientas utilizadas:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">133</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-8" datatype="html">
-        <source>Microsoft Office.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">136</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-9" datatype="html">
-        <source>SQL (SQLite + DB Browser).</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">137</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-10" datatype="html">
-        <source>R (RStudio Desktop).</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">138</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-11" datatype="html">
-        <source>Tareas realizadas:</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">141</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-12" datatype="html">
-        <source>Procesamiento, limpieza y verificación de datos.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">144</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-13" datatype="html">
-        <source>Análisis y resumen de la información.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">145</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="P4-14" datatype="html">
-        <source>Visualización y presentación de los resultados.</source>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/componentes/proyectos/proyectos.component.html</context>
-          <context context-type="linenumber">146</context>
         </context-group>
       </trans-unit>
     </body>

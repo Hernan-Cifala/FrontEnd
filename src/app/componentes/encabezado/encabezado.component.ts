@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ContactoService } from 'src/app/servicios/contacto.service';
 
 @Component({
   selector: 'app-encabezado',
@@ -7,15 +6,5 @@ import { ContactoService } from 'src/app/servicios/contacto.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent {
-
-  contactos:any;
-
-  constructor(private servicio:ContactoService) { }
-
-  ngOnInit(): void {
-    this.servicio.get().subscribe(data => {
-      this.contactos = data;
-    })
-  }
 
 }

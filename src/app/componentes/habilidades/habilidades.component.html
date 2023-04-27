@@ -2,19 +2,18 @@
         
     <div class="row fondo">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@H1"><b>Habilidades y Competencias</b></h2>
+        <h2 class="categoria" i18n="@@HAB-1"><b>Habilidades y Competencias</b></h2>
     </div>
     
-    <div class="row fondo">
+    <div class="row fondo" *ngFor = "let habilidad of habilidades">
         <div class="col-sm-12">
-            <img src={{habilidad[0].ruta}} class="skills" width="75%" height="100%" data-bs-toggle="modal" data-bs-target="#habilidad" alt="Habilidades y Competencias">
+            <img src={{habilidad.ruta}} class="skills" width="75%" height="100%" data-bs-toggle="modal" data-bs-target="#habilidad" alt="Habilidades y Competencias">
+        </div>
+        <div class="modal fade" id="habilidad" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <img src={{habilidad.ruta}} width="100%" height="100%" class="center">
+            </div>
         </div>
     </div>
 
-    <div class="modal fade" id="habilidad" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-                <img src={{habilidad[0].ruta}} width="100%" height="100%" class="center">
-        </div>
-    </div>
-    
 </div>
