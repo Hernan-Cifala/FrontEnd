@@ -5,13 +5,13 @@
             <h3 class="texto-superior">Admin</h3>
         </div>
         <div class="col-sm-2">
-            <button type="button" (click)="onLogout()" class="btn btn-primary btn-superior" i18n="@@A1">Cerrar Sesión</button>
+            <button type="button" (click)="onLogout()" class="btn btn-primary btn-superior">Cerrar Sesión</button>
         </div>
     </div>
 
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@X1"><b>Información Personal</b></h2>
+        <h2 class="categoria"><b>Información Personal</b></h2>
         <button class="btn btn-dark" (click)="setActual(personas[0], servicioPerso)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarPersona" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let persona of personas">
@@ -24,7 +24,7 @@
 
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@X1"><b>Experiencia Laboral</b></h2>
+        <h2 class="categoria"><b>Experiencia Laboral</b></h2>
         <button class="btn btn-dark" (click)="setActual(Experiencia, servicioExpe)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearExperiencia" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let experiencia of experiencias">
@@ -40,7 +40,7 @@
 
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@X1"><b>Formación Profesional</b></h2>
+        <h2 class="categoria"><b>Formación Profesional</b></h2>
         <button class="btn btn-dark" (click)="setActual(Formacion, servicioForma)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearFormacion" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let formacion of formaciones">
@@ -63,7 +63,7 @@
 
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@X1"><b>Habilidades y Competencias</b></h2>
+        <h2 class="categoria"><b>Habilidades y Competencias</b></h2>
         <button class="btn btn-dark" (click)="setActual(habilidades[0], servicioHabi)" style="color: white;"><i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#editarHabilidad" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let habilidad of habilidades">
@@ -73,7 +73,7 @@
 
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@X1"><b>Proyectos Recientes</b></h2>
+        <h2 class="categoria"><b>Proyectos Recientes</b></h2>
         <button class="btn btn-dark" (click)="setActual(Proyecto, servicioProye)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearProyecto" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let proyecto of proyectos">
@@ -105,7 +105,7 @@
 
     <div class="row fondo alineado">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@X1"><b>Información de Contacto</b></h2>
+        <h2 class="categoria"><b>Información de Contacto</b></h2>
         <button class="btn btn-dark" (click)="setActual(Contacto, servicioConta)" style="color: white;"><i class="fa-regular fa-plus" data-bs-toggle="modal" data-bs-target="#crearContacto" style="font-size: 24px;"></i></button>
 
         <div class="col-sm-12" *ngFor = "let contacto of contactos">

@@ -8,13 +8,13 @@ import { PersonaService } from 'src/app/servicios/persona.service';
 })
 export class PresentacionComponent {
 
-  persona:any;
+  personas:any;
 
   constructor(private servicio:PersonaService) { }
 
   ngOnInit(): void {
     this.servicio.get().subscribe(data => {
-      this.persona = data;
+      this.personas = data;
     })
   }
 

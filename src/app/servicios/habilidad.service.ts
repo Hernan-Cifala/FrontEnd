@@ -8,7 +8,7 @@ import { Habilidad } from '../modelos/habilidad';
 })
 export class HabilidadService {
 
-  url = 'http://localhost:8080/habilidad/';
+  url = 'https://portfolio-backend-ywnb.onrender.com/habilidad/';
 
   constructor(private http:HttpClient) { }
 

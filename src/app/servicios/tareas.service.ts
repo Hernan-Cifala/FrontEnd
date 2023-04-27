@@ -8,7 +8,7 @@ import { Tareas } from '../modelos/tareas';
 })
 export class TareasService {
 
-  url = 'http://localhost:8080/tareas/';
+  url = 'https://portfolio-backend-ywnb.onrender.com/tareas/';
 
   constructor(private http:HttpClient) { }
 

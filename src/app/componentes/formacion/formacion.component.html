@@ -2,7 +2,7 @@
         
     <div class="row fondo">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@F1"><b>Formación Profesional</b></h2>
+        <h2 class="categoria" i18n="@@FOR-1"><b>Formación Profesional</b></h2>
     </div>
 
     <div class="row fondo" *ngFor = "let formacion of formaciones">
@@ -10,10 +10,10 @@
             <img src={{formacion.certificacion}} (click)="setActual(formacion)" class="certificado" width="75%" height="75%" type="button" data-bs-toggle="modal" data-bs-target="#certificado" alt={{formacion.nombre}}>
         </div>
         <div class="col-sm-6">
-            <p class="texto" style="padding-bottom: 20px;"><b>{{formacion.nombre}}:</b> {{formacion.descripcion}}</p>     
+            <p class="texto" style="padding-bottom: 20px;" i18n="@@FOR-2"><b>{{formacion.nombre}}:</b> {{formacion.descripcion}}</p>     
             <ul>
                 <div *ngFor = "let conocimiento of conocimientos">
-                    <li class="lista" *ngIf = "conocimiento.formacion_id == formacion.id">{{conocimiento.conocimiento}}</li>
+                    <li class="lista" *ngIf = "conocimiento.formacion_id == formacion.id" i18n="@@FOR-3">{{conocimiento.conocimiento}}</li>
                 </div>
             </ul>
         </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Formacion } from 'src/app/modelos/formacion';
 import { ConocimientosService } from 'src/app/servicios/conocimientos.service';
 import { FormacionService } from 'src/app/servicios/formacion.service';
@@ -8,7 +8,7 @@ import { FormacionService } from 'src/app/servicios/formacion.service';
   templateUrl: './formacion.component.html',
   styleUrls: ['./formacion.component.css']
 })
-export class FormacionComponent {
+export class FormacionComponent implements OnInit {
 
   formaciones:any;
   conocimientos:any;

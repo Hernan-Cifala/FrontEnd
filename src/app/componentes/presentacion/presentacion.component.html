@@ -3,17 +3,17 @@
     <div class="row banner">
         <img src="https://img.freepik.com/premium-photo/programming-script-tag-3d-symbol-blue-background_582637-286.jpg?w=740" height="360" alt="Imagen" class="center">
     </div>
-    <div class="row fondo">
+    <div class="row fondo" *ngFor = "let persona of personas">
         <div class="col-sm-2">
-            <img src={{persona[0].foto}} class="foto">
+            <img src={{persona.foto}} class="foto">
         </div>
         <div class="col-sm-3">
-            <h3 class="nombre"><b>{{persona[0].nombre}} {{persona[0].apellido}}</b></h3>
-            <h5 class="texto">{{persona[0].titulo}}</h5>
+            <h3 class="nombre"><b>{{persona.nombre}} {{persona.apellido}}</b></h3>
+            <h5 class="texto" i18n="@@PRE-1">{{persona.titulo}}</h5>
         </div>
         <div class="col-sm-6">
-            <h5 class="resumen" i18n="@@A1"><b>Resumen Profesional:</b></h5>
-            <p class="texto">{{persona[0].resumen}}</p>
+            <h5 class="resumen" i18n="@@PRE-2"><b>Resumen Profesional:</b></h5>
+            <p class="texto" i18n="@@PRE-3">{{persona.resumen}}</p>
         </div>        
     </div>
 </div>

@@ -2,20 +2,20 @@
         
     <div class="row fondo">
         <hr style="width:50%;height:3px;border-color:white;margin-top:50px;margin-bottom:0px;margin-left:auto;margin-right:auto;">
-        <h2 class="categoria" i18n="@@P1"><b>Proyectos Recientes</b></h2>
+        <h2 class="categoria" i18n="@@PRO-1"><b>Proyectos Recientes</b></h2>
     </div>
 
     <div class="row fondo">
         <div class="col-sm-4" *ngFor = "let proyecto of proyectos">
-            <h4 class="texto alineado" style="font-size: 16pt;">{{proyecto.titulo}}</h4>
-            <p class="texto alineado" style="padding-bottom: 20px;">{{proyecto.subtitulo}}</p>
+            <h4 class="texto alineado" style="font-size: 16pt;" i18n="@@PRO-2">{{proyecto.titulo}}</h4>
+            <p class="texto alineado" style="padding-bottom: 20px;" i18n="@@PRO-3">{{proyecto.subtitulo}}</p>
             <ul>
                 <div *ngFor = "let tarea of tareas">
-                    <li class="lista" *ngIf = "tarea.proyecto_id == proyecto.id">{{tarea.tarea}}</li>
+                    <li class="lista" *ngIf = "tarea.proyecto_id == proyecto.id" i18n="@@PRO-5">{{tarea.tarea}}</li>
                 </div>
             </ul>
 
-            <div class="text-center"><button type="button" (click)="setActual(proyecto)" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#proyecto" i18n="@@P2">Ver más...</button></div>
+            <div class="text-center"><button type="button" (click)="setActual(proyecto)" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#proyecto" i18n="@@PRO-7">Ver más...</button></div>
         </div>
     </div>
 
@@ -23,27 +23,27 @@
         <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header fondo">
-                    <h4 class="modal-title" id="titulo"><b>{{modal.titulo}}</b></h4>
+                    <h4 class="modal-title" id="titulo" i18n="@@PRO-2"><b>{{modal.titulo}}</b></h4>
                     <button type="button" class="btn-close" style="background-color: lightblue;" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body fondo">
-                    <h5>{{modal.subtitulo}}</h5>
+                    <h5 i18n="@@PRO-3">{{modal.subtitulo}}</h5>
                     <br>
-                    <p>{{modal.descripcion}}</p>
+                    <p i18n="@@PRO-4">{{modal.descripcion}}</p>
                     <br>
-                    <p><b i18n="@@P3">Herramientas utilizadas:</b></p>
+                    <p><b i18n="@@PRO-8">Herramientas utilizadas:</b></p>
                     <br>
                     <ul>
                         <div *ngFor = "let herramienta of herramientas">
-                            <li *ngIf = "herramienta.proyecto_id == modal.id">{{herramienta.herramienta}}</li>
+                            <li *ngIf = "herramienta.proyecto_id == modal.id" i18n="@@PRO-6">{{herramienta.herramienta}}</li>
                         </div>
                     </ul>
                     <br>
-                    <p><b i18n="@@P4">Tareas realizadas:</b></p>
+                    <p><b i18n="@@PRO-9">Tareas realizadas:</b></p>
                     <br>
                     <ul>
                         <div *ngFor = "let tarea of tareas">
-                            <li *ngIf = "tarea.proyecto_id == modal.id">{{tarea.tarea}}</li>
+                            <li *ngIf = "tarea.proyecto_id == modal.id" i18n="@@PRO-5">{{tarea.tarea}}</li>
                         </div>
                     </ul>
                     <br>
