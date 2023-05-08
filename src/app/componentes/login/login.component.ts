@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
-    console.log(this.form);
     this.login.login(this.form.value)
       .then(response => {
       console.log(response);

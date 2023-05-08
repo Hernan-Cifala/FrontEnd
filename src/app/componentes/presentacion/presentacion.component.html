@@ -1,8 +1,9 @@
 <div id="presentacion">
         
-    <div class="row banner">
-        <img src="https://img.freepik.com/premium-photo/programming-script-tag-3d-symbol-blue-background_582637-286.jpg?w=740" height="360" alt="Imagen" class="center">
+    <div class="row fondo">
+        <img src="assets\public_html\Banner.jpg" height="360" alt="Banner">
     </div>
+    
     <div class="row fondo" *ngFor = "let persona of personas">
         <div class="col-sm-2">
             <img src={{persona.foto}} class="foto">
