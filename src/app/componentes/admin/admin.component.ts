@@ -106,6 +106,7 @@ export class AdminComponent {
     this.servicio.delete(this.elemento.id).subscribe((data: any) => {
       console.log(data);
     })
+    this.redirectTo('/admin');
   }
   
   crear(elemento:any) {
@@ -113,6 +114,7 @@ export class AdminComponent {
     this.servicio.post(elemento).subscribe((data: any) => {
       console.log(data);
     })
+    this.redirectTo('/admin');
   }
 
   editar(elemento:any) {
@@ -120,6 +122,7 @@ export class AdminComponent {
     this.servicio.put(this.elemento.id, elemento).subscribe((data: any) => {
       console.log(data);
     })
+    this.redirectTo('/admin');
   }
 
   onLogout() {
@@ -134,6 +137,11 @@ export class AdminComponent {
         console.log("Fallo al cerrar sesion");
     })
   }
+
+  redirectTo(uri:string){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+    this.router.navigate([uri]));
+ }
 
   originalOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
     return 0;
