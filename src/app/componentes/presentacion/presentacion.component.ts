@@ -13,6 +13,8 @@ export class PresentacionComponent {
   constructor(private servicio:PersonaService) { }
 
   ngOnInit(): void {
+    alert("La carga de la información podría demorarse unos minutos.");
+
     this.servicio.get().subscribe(data => {
       this.personas = data;
     })
