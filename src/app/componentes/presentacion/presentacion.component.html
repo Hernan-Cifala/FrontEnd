@@ -1,8 +1,6 @@
 <div id="presentacion">
         
-    <div class="row fondo">
-        <img src="assets\public_html\Banner.jpg" height="360" alt="Banner">
-    </div>
+    <div class="row fondo banner"></div>
     
     <div class="row fondo" *ngFor = "let persona of personas">
         <div class="col-sm-2">
@@ -17,4 +15,5 @@
             <p class="texto" i18n="@@PRE-3">{{persona.resumen}}</p>
         </div>        
     </div>
+
 </div>
