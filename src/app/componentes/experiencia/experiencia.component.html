@@ -6,14 +6,15 @@
     </div>
 
     <div class="row fondo" *ngFor = "let experiencia of experiencias">
-        <div class="col-sm-4">
+        <div class="col-sm-6">
             <img src={{experiencia.logo}} class="certificado" width="75%" height="75%" alt={{experiencia.nombre}}>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-6">
             <p class="texto" style="padding-bottom: 20px;" i18n="@@EXP-2"><b>{{experiencia.nombre}} ( {{experiencia.inicio}} - {{experiencia.fin}} )</b></p>
-            <p class="texto" i18n="@@EXP-3">Trabajo actual: {{experiencia.actual}}</p>
-            <p class="texto" i18n="@@EXP-4">Tipo de empleo: {{experiencia.tipo}}</p>
-            <p class="texto" i18n="@@EXP-5">{{experiencia.descripcion}}</p>
+            <p class="texto">Tipo de empleo: {{experiencia.tipo}}</p>
+            <p class="texto">Puesto: {{experiencia.descripcion}}</p>
+            <p class="texto">Descripción de la empresa: </p>
+            <p class="texto">Metódica Digital es tu socio estratégico en tu proceso de transformación digital. Descubre soluciones personalizadas que se adaptan a tus necesidades y te impulsan hacia el éxito.</p>
         </div>
         <hr style="width:50%;height:2px;border-color:white;margin-top:50px;margin-bottom:50px;margin-left:auto;margin-right:auto;">       
     </div>
